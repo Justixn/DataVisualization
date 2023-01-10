@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Daniel</title>
+    <meta charset="utf-8" />
+    <style>
+      .bar {
+        fill: steelblue;
+      }
+    </style>
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css"
+    />
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+
+    <script type="text/javascript" src="./d3.min.js"></script>
+  </head>
+  <body>
+    <!-- Wenn Styling der Buttons nicht funktioniert diese hier auswählen!
+      <button type="button" onclick="Linie(1)">On</button>
+      <button type="button" onclick="Linie(0)">Off</button>
+    -->
+
+    <!-- <svg id="blob" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+
+      <circle
+        cx="30.7"
+        cy="35.1"
+        r="0.5"
+        style="fill: black; stroke: white; stroke-width: 0.15"
+      />
+    </svg> -->
+
+    <div class="container">
+      <div class="rectangle" id="rectangle">
+        <label id="Title" class="Front">Pendlerverkehr in Ostdeutschland</label>
+        <div class="Schalter">
+          <label id="Einpendler" class="Front">Auspendler</label>
+
+          <label class="switch" id="switch">
+            <input
+              id="toggle"
+              type="checkbox"
+              checked="checked"
+              onclick="colorchange()"
+            />
+            <span class="slider round"></span>
+          </label>
+
+          <label id="Auspendler" class="Front">Einpendler</label>
+
+          <div id="berlinTag" class="berlinTag">
+            <label class="Front" id="berlinLabel">Berlin</label>
+          </div>
+          <div class="dropDown" id="dropDown">
+            <select name="LandName" id="LandName" onchange="Linie()">
+              <option value="Alle">Alle</option>
+              <option value="Brandenburg_an_der_Havel">
+                Brandenburg an der Havel
+              </option>
+              <option value="Potsdam">Potsdam</option>
+              <option value="Frankfurt-Oder">Frankfurt-Oder</option>
+              <option value="Barnim">Barnim</option>
+              <option value="Dahme-Spreewald">Dahme-Spreewald</option>
+              <option value="Elbe-Elster">Elbe-Elster</option>
+              <option value="Havelland">Havelland</option>
+              <option value="Märkisch-Oderland">Märkisch-Oderland</option>
+              <option value="Oberhavel">Oberhavel</option>
+              <option value="Oberspreewald-Lausitz">
+                Oberspreewald-Lausitz
+              </option>
+              <option value="Ostprignitz-Ruppin">Ostprignitz-Ruppin</option>
+              <option value="Potsdam-Mittelmark">Potsdam-Mittelmark</option>
+              <option value="Spree-Neiße">Spree-Neiße</option>
+              <option value="Teltow-Fläming">Teltow-Fläming</option>
+              <option value="Uckermark">Uckermark</option>
+            </select>
+          </div>
+        </div>
+
+        <svg width="300" height="200">
+          <defs>
+            <marker
+              id="arrow"
+              markerUnits="strokeWidth"
+              markerWidth="12"
+              markerHeight="12"
+              viewBox="5 0 12 12"
+              refX="6"
+              refY="6"
+              orient="auto"
+            >
+              <path d="M2,2 L10,6 L2,10 L6,6 L2,2" style="fill: white"></path>
+            </marker>
+          </defs>
+
+          <!-- <line x1="0" y1="0" x2="200" y2="50"  stroke="red" stroke-width="2" marker-end="url(#arrow)"/> -->
+
+          <!-- <path d="M20,70 T80,100 T160,80 T200,90" fill="white" stroke="red" stroke-width="2" marker-start="url(#arrow)" marker-mid="url(#arrow)" marker-end="url(#arrow)"/> -->
+        </svg>
+
+        <div class="rectangle1" id="rectangle1">
+          <label id="Gesamtanzahl" class="Text">Gesamtanzahl</label>
+
+          <label id="Anzahl" class="Zahl"></label>
+
+          <label id="Frauen" class="Text">Frauen</label>
+          <div id="flexContainer" class="flexContainer">
+            <label id="Anzahl1" class="Front"></label>
+            <label id="Strich1" class="Front">|</label>
+            <label id="Percent1" class="Front"></label>
+          </div>
+          <label id="Männer" class="Text">Männer</label>
+          <div id="flexContainer1" class="flexContainer">
+            <label id="Anzahl2" class="Front"></label>
+            <label id="Strich2" class="Front">|</label>
+            <label id="Percent2" class="Front"></label>
+          </div>
+
+          <label id="Auszubildender" class="Text">Auszubildender</label>
+          <div id="flexContainer2" class="flexContainer">
+            <label id="Anzahl3" class="Front"></label>
+            <label id="Strich3" class="Front">|</label>
+            <label id="Percent3" class="Front"></label>
+          </div>
+          <div id="Verhaeltnis" class="flexContainer1">
+            <label id="Verhaeltnis" class="Front">Verhaeltnis</label>
+          </div>
+          <div id="Pendlerlabel" class="flexContainer1">
+            <label class="Front" id="Penderbewegung"
+              >Pendler - Startorten</label
+            >
+          </div>
+
+          <svg width="200" height="200">
+            <defs>
+              <linearGradient id="Gradient1" x2="100%" y2="0%">
+                <stop id="stop1" offset="33%" stop-color="rgb(120,120,255)" />
+                <stop id="stop2" offset="33%" stop-color="rgb(50,50,255)" />
+                <stop id="stop3" offset="100%" stop-color="rgb(50,50,255)" />
+              </linearGradient>
+            </defs>
+            <rect
+              x="0"
+              y="10"
+              rx="10"
+              ry="10"
+              width="150"
+              height="30"
+              fill="url(#Gradient1)"
+            />
+            <text class="FrontColor" x="20" y="30" fill="white">33%</text>
+            <text class="FrontColor" x="100" y="30" fill="white">66%</text>
+
+            <circle
+              id="circle1"
+              cx="10"
+              cy="50"
+              r="5"
+              fill="rgb(120,120,255)"
+              stroke="black"
+            />
+            <text class="FrontColor" x="20" y="54" font-size="9px" fill="white">
+              Pendler
+            </text>
+            <circle
+              id="circle2"
+              cx="100"
+              cy="50"
+              r="5"
+              fill="rgb(50,50,255)"
+              stroke="black"
+            />
+            <text
+              class="FrontColor"
+              x="120"
+              y="54"
+              font-size="9px"
+              fill="white"
+            >
+              vor Ort
+            </text>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align: center">
+      <table>
+        <thread>
+          <tr>
+            <th>Wohnort</th>
+            <th>Nummer</th>
+            <th>Arbeitsort</th>
+            <th>Insgesamt</th>
+            <th>Männer</th>
+            <th>Frauen</th>
+            <th>Deutsche</th>
+            <th>Ausländer_Sonst</th>
+            <th>AZB</th>
+          </tr>
+        </thread>
+        <tbody id="data-output"></tbody>
+      </table>
+      <br />
+
+      <button
+        class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
+        onclick="Linie(1)"
+      >
+        On
+      </button>
+      <button
+        class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent"
+        onclick="Linie(0)"
+      >
+        Off
+      </button>
+      <br />
+    </div>
+
+    <!--<textarea id="display" style="width: 1000px; height: 1000px"><p id="elements"> </p></textarea>
+    -->
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
