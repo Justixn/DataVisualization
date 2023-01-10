@@ -77,16 +77,19 @@ d3.json("landkreise.geojson").then(function (json) {
 // .attr('fill', '#69b3a2');
 
 // Wählt Städte aus und fügt Pin an Geoposition hinzu
+var radius = 0;
 d3.json("staedte.geojson").then(function (json) {
-  svg
+  ssvg
     .selectAll(".pin")
     .data(json.features)
     .enter()
     .append("circle", ".pin")
-    .attr("r", 5)
-    .style("fill", "none")
-    .style("stroke", "white")
-    .style("stroke-width", 2)
+    //.filter((ort) => (ort.Insgesamt / 10) * 0.1)
+    .style("fill", "lightblue")
+    .style("stroke", "blue")
+    .style("stroke-width", 1)
+    .style("visibility", "visible")
+    .style("opacity", 0.2)
 
     .attr("transform", function (d) {
       return (
@@ -96,27 +99,26 @@ d3.json("staedte.geojson").then(function (json) {
       );
     });
 
-  //Fügt Städte Namen an Pin hinzu
-  // svg
-  //   .selectAll(".pin")
-  //   .data(json.features)
-  //   .enter()
-  //   .append("text")
-  //   .text(function (d) {
-  //     return d.properties.name;
-  //   })
-  //   .style("text-anchor", "middle")
-  //   .style("font-size", "17px")
-  //   .attr("transform", function (d) {
-  //     return (
-  //       "translate(" +
-  //       projection([
-  //         d.geometry.coordinates[0],
-  //         d.geometry.coordinates[1] + 0.06,
-  //       ]) +
-  //       ")"
-  //     );
-  //   });
+  svg
+    .selectAll(".pin")
+    .data(json.features)
+    .enter()
+    .append("circle", ".pin")
+    .attr("r", 5)
+    .style("fill", "none")
+    .style("stroke", "white")
+    .style("stroke-width", 2)
+    .style("visibility", "visible")
+    .style("opacity", 0.2)
+
+    .attr("transform", function (d) {
+      return (
+        "translate(" +
+        projection([d.geometry.coordinates[0], d.geometry.coordinates[1]]) +
+        ")"
+      );
+    });
+
   //Fügt eine Linie an jedem Pin an. Ziel Koordinate ist Berlin
   svg
     .selectAll("line")
@@ -162,7 +164,8 @@ d3.json("staedte.geojson").then(function (json) {
     .attr("marker-end", "url(#arrow)")
     .style("stroke", "white")
     .style("stroke-width", 2)
-    .style("visibility", "hidden");
+    .style("visibility", "visible")
+    .style("opacity", 0.2);
 });
 
 function y(xA, xB, yA, yB, radius) {
@@ -192,9 +195,14 @@ var Linie = function () {
   var x = document.getElementById("LandName").value;
   svg
     .selectAll("line")
-    .style("visibility", "hidden")
+    .style("opacity", 0.2)
     .filter((ort) => ort.name == x)
-    .style("visibility", "visible");
+    .style("opacity", 0.9999);
+  svg
+    .selectAll("circle")
+    .style("opacity", 0.2)
+    .filter((ort) => ort.name == x)
+    .style("opacity", 0.9999);
 };
 
 // Farbänderungen
@@ -256,6 +264,8 @@ function colorchange() {
     }
   }
 }
+
+function commuting() {}
 
 fetch("pendler.json")
   .then(function (response) {

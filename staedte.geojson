@@ -137,6 +137,14 @@
         "coordinates": [14.492934004514666, 52.33821631271155],
         "type": "Point"
       }
+    },
+    {
+      "type": "Feature",
+      "name": "Spree-Neiße",
+      "geometry": {
+        "coordinates": [14.512395743279882, 51.96331899596143],
+        "type": "Point"
+      }
     }
   ]
 }
