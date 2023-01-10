@@ -5,6 +5,7 @@
     {
       "type": "Feature",
       "name": "Potsdam",
+      "district": "Potsdam",
       "geometry": {
         "coordinates": [13.058736207098065, 52.40159716203581],
         "type": "Point"
@@ -20,7 +21,7 @@
     },
     {
       "type": "Feature",
-      "name": "Brandenburg_an_der_Havel",
+      "name": "Brandenburg an der Havel",
       "geometry": {
         "coordinates": [12.549692039758298, 52.409888067746806],
         "type": "Point"
@@ -132,7 +133,7 @@
     },
     {
       "type": "Feature",
-      "name": "Frankfurt-Oder",
+      "name": "Frankfurt (Oder)",
       "geometry": {
         "coordinates": [14.492934004514666, 52.33821631271155],
         "type": "Point"
