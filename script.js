@@ -141,8 +141,24 @@ d3.json("staedte.geojson").then(function (json) {
         5
       );
     })
-    .attr("x2", projection(berlin)[0])
-    .attr("y2", projection(berlin)[1])
+    .attr("x2", function (d) {
+      return x(
+        projection(d.geometry.coordinates)[0],
+        projection(berlin)[0],
+        projection(d.geometry.coordinates)[1],
+        projection(berlin)[1],
+        10
+      );
+    })
+    .attr("y2", function (d) {
+      return y(
+        projection(d.geometry.coordinates)[0],
+        projection(berlin)[0],
+        projection(d.geometry.coordinates)[1],
+        projection(berlin)[1],
+        10
+      );
+    })
     .attr("marker-end", "url(#arrow)")
     .style("stroke", "white")
     .style("stroke-width", 2)
