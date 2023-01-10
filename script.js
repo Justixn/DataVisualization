@@ -79,7 +79,7 @@ d3.json("landkreise.geojson").then(function (json) {
 // Wählt Städte aus und fügt Pin an Geoposition hinzu
 var radius = 0;
 d3.json("staedte.geojson").then(function (json) {
-  ssvg
+  svg
     .selectAll(".pin")
     .data(json.features)
     .enter()
