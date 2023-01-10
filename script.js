@@ -84,7 +84,9 @@ d3.json("staedte.geojson").then(function (json) {
     .data(json.features)
     .enter()
     .append("circle", ".pin")
-    //.style("r", zahl(z))
+    .style("r", function (d) {
+      return d.population / 5000;
+    })
     .style("fill", "lightblue")
     .style("stroke", "blue")
     .style("stroke-width", 1)

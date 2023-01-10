@@ -5,6 +5,7 @@
     {
       "type": "Feature",
       "name": "Potsdam",
+      "population": 178089,
       "geometry": {
         "coordinates": [13.058736207098065, 52.40159716203581],
         "type": "Point"
@@ -12,7 +13,8 @@
     },
     {
       "type": "Feature",
-      "name": "Cottbus, Stadt",
+      "name": "Cottbus",
+      "population": 100219,
       "geometry": {
         "type": "Point",
         "coordinates": [14.336588310711107, 51.757348197438546]
@@ -21,6 +23,7 @@
     {
       "type": "Feature",
       "name": "Brandenburg an der Havel",
+      "population": 72124,
       "geometry": {
         "coordinates": [12.549692039758298, 52.409888067746806],
         "type": "Point"
@@ -29,6 +32,7 @@
     {
       "type": "Feature",
       "name": "Barnim",
+      "population": 182760,
       "geometry": {
         "coordinates": [13.618015631988385, 52.81708842113497],
         "type": "Point"
@@ -37,6 +41,7 @@
     {
       "type": "Feature",
       "name": "Teltow-Fläming",
+      "population": 168296,
       "geometry": {
         "coordinates": [13.260324897497327, 52.071146881876984],
         "type": "Point"
@@ -45,6 +50,7 @@
     {
       "type": "Feature",
       "name": "Elbe-Elster",
+      "population": 102638,
       "geometry": {
         "coordinates": [13.497095692868669, 51.61363401229772],
         "type": "Point"
@@ -53,6 +59,7 @@
     {
       "type": "Feature",
       "name": "Havelland",
+      "population": 161909,
       "geometry": {
         "coordinates": [12.60883422639614, 52.62120389153398],
         "type": "Point"
@@ -61,6 +68,7 @@
     {
       "type": "Feature",
       "name": "Märkisch-Oderland",
+      "population": 194328,
       "geometry": {
         "coordinates": [14.199166024392241, 52.660650387757215],
         "type": "Point"
@@ -69,6 +77,7 @@
     {
       "type": "Feature",
       "name": "Oberhavel",
+      "population": 211249,
       "geometry": {
         "coordinates": [13.189752521032233, 52.764050916321025],
         "type": "Point"
@@ -77,6 +86,7 @@
     {
       "type": "Feature",
       "name": "Oberspreewald-Lausitz",
+      "population": 110476,
       "geometry": {
         "coordinates": [13.949449840211742, 51.663614502736095],
         "type": "Point"
@@ -85,6 +95,7 @@
     {
       "type": "Feature",
       "name": "Ostprignitz-Ruppin",
+      "population": 99078,
       "geometry": {
         "coordinates": [12.678874548152152, 52.97949436610779],
         "type": "Point"
@@ -93,6 +104,7 @@
     {
       "type": "Feature",
       "name": "Prignitz",
+      "population": 76508,
       "geometry": {
         "coordinates": [11.967810438653942, 53.11714760037452],
         "type": "Point"
@@ -101,6 +113,7 @@
     {
       "type": "Feature",
       "name": "Potsdam-Mittelmark",
+      "population": 214664,
       "geometry": {
         "coordinates": [12.6739355509402, 52.17603655989805],
         "type": "Point"
@@ -109,6 +122,7 @@
     {
       "type": "Feature",
       "name": "Dahme-Spreewald",
+      "population": 169067,
       "geometry": {
         "coordinates": [13.866166118517242, 52.04690269269224],
         "type": "Point"
@@ -117,6 +131,7 @@
     {
       "type": "Feature",
       "name": "Oder-Spree",
+      "population": 178658,
       "geometry": {
         "coordinates": [14.174881754846467, 52.26388650393238],
         "type": "Point"
@@ -125,6 +140,7 @@
     {
       "type": "Feature",
       "name": "Uckermark",
+      "population": 119552,
       "geometry": {
         "coordinates": [13.711085850512688, 53.228374643265965],
         "type": "Point"
@@ -133,6 +149,7 @@
     {
       "type": "Feature",
       "name": "Frankfurt (Oder)",
+      "population": 57873,
       "geometry": {
         "coordinates": [14.492934004514666, 52.33821631271155],
         "type": "Point"
@@ -141,6 +158,7 @@
     {
       "type": "Feature",
       "name": "Spree-Neiße",
+      "population": 114429,
       "geometry": {
         "coordinates": [14.512395743279882, 51.96331899596143],
         "type": "Point"
