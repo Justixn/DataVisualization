@@ -85,7 +85,7 @@ d3.json("staedte.geojson").then(function (json) {
     .enter()
     .append("circle", ".pin")
     .style("r", function (d) {
-      return getPopulationNumber(d.name)}
+      return d.population/5000}
       )
     .style("fill", "lightblue")
     .style("stroke", "blue")
