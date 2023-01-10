@@ -173,26 +173,12 @@ function x(xA, xB, yA, yB, radius) {
 
 // Code für die Sichtbarkeit der Linien bei Knopfdruck
 var Linie = function () {
-  fetch("staedte.json")
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (products) {
-      let placeholder = document.querySelector("#data-output");
-      let out = "";
-
-      var name = response.filter((ort) => ort.name == "Märkisch-Oderland");
-    });
-
   var x = document.getElementById("LandName").value;
-  if (x == "Märkisch-Oderland") {
-    svg.select("line").style("visibility", "visible");
-  }
-  // if (visibility) {
-  //   svg.selectAll("line").style("visibility", "hidden");
-  // } else {
-  //   svg.selectAll("line").style("visibility", "visible");
-  // }
+  svg
+    .selectAll("line")
+    .style("visibility", "hidden")
+    .filter((ort) => ort.name == x)
+    .style("visibility", "visible");
 };
 
 // Farbänderungen

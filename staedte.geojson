@@ -4,19 +4,7 @@
   "features": [
     {
       "type": "Feature",
-      "properties": {
-        "name": "Cottbus"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [14.336588310711107, 51.757348197438546]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Potsdam"
-      },
+      "name": "Potsdam",
       "geometry": {
         "coordinates": [13.058736207098065, 52.40159716203581],
         "type": "Point"
@@ -24,9 +12,15 @@
     },
     {
       "type": "Feature",
-      "properties": {
-        "name": "Brandenburg"
-      },
+      "name": "Cottbus",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [14.336588310711107, 51.757348197438546]
+      }
+    },
+    {
+      "type": "Feature",
+      "name": "Brandenburg_an_der_Havel",
       "geometry": {
         "coordinates": [12.549692039758298, 52.409888067746806],
         "type": "Point"
@@ -34,9 +28,7 @@
     },
     {
       "type": "Feature",
-      "properties": {
-        "name": "Barnim"
-      },
+      "name": "Barnim",
       "geometry": {
         "coordinates": [13.618015631988385, 52.81708842113497],
         "type": "Point"
@@ -44,9 +36,7 @@
     },
     {
       "type": "Feature",
-      "properties": {
-        "name": "Teltow-Fläming"
-      },
+      "name": "Teltow-Fläming",
       "geometry": {
         "coordinates": [13.260324897497327, 52.071146881876984],
         "type": "Point"
@@ -54,9 +44,7 @@
     },
     {
       "type": "Feature",
-      "properties": {
-        "name": "Elbe-Elster"
-      },
+      "name": "Elbe-Elster",
       "geometry": {
         "coordinates": [13.497095692868669, 51.61363401229772],
         "type": "Point"
@@ -64,9 +52,7 @@
     },
     {
       "type": "Feature",
-      "properties": {
-        "name": "Havelland"
-      },
+      "name": "Havelland",
       "geometry": {
         "coordinates": [12.60883422639614, 52.62120389153398],
         "type": "Point"
@@ -74,9 +60,7 @@
     },
     {
       "type": "Feature",
-      "properties": {
-        "name": "Märkisch-Oderland"
-      },
+      "name": "Märkisch-Oderland",
       "geometry": {
         "coordinates": [14.199166024392241, 52.660650387757215],
         "type": "Point"
@@ -84,9 +68,7 @@
     },
     {
       "type": "Feature",
-      "properties": {
-        "name": "Oberhavel"
-      },
+      "name": "Oberhavel",
       "geometry": {
         "coordinates": [13.189752521032233, 52.764050916321025],
         "type": "Point"
@@ -94,9 +76,7 @@
     },
     {
       "type": "Feature",
-      "properties": {
-        "name": "Oberspreewald-Lausitz"
-      },
+      "name": "Oberspreewald-Lausitz",
       "geometry": {
         "coordinates": [13.949449840211742, 51.663614502736095],
         "type": "Point"
@@ -104,9 +84,7 @@
     },
     {
       "type": "Feature",
-      "properties": {
-        "name": "Ostprignitz-Ruppin"
-      },
+      "name": "Ostprignitz-Ruppin",
       "geometry": {
         "coordinates": [12.678874548152152, 52.97949436610779],
         "type": "Point"
@@ -114,9 +92,7 @@
     },
     {
       "type": "Feature",
-      "properties": {
-        "name": "Prignitz"
-      },
+      "name": "Prignitz",
       "geometry": {
         "coordinates": [11.967810438653942, 53.11714760037452],
         "type": "Point"
@@ -124,9 +100,7 @@
     },
     {
       "type": "Feature",
-      "properties": {
-        "name": "Potsdam-Mittelmark"
-      },
+      "name": "Potsdam-Mittelmark",
       "geometry": {
         "coordinates": [12.6739355509402, 52.17603655989805],
         "type": "Point"
@@ -134,9 +108,7 @@
     },
     {
       "type": "Feature",
-      "properties": {
-        "name": "Dahme-Spreewald"
-      },
+      "name": "Dahme-Spreewald",
       "geometry": {
         "coordinates": [13.866166118517242, 52.04690269269224],
         "type": "Point"
@@ -144,9 +116,7 @@
     },
     {
       "type": "Feature",
-      "properties": {
-        "name": "Oder-Spree"
-      },
+      "name": "Oder-Spree",
       "geometry": {
         "coordinates": [14.174881754846467, 52.26388650393238],
         "type": "Point"
@@ -154,11 +124,17 @@
     },
     {
       "type": "Feature",
-      "properties": {
-        "name": "Uckermark"
-      },
+      "name": "Uckermark",
       "geometry": {
         "coordinates": [13.711085850512688, 53.228374643265965],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "name": "Frankfurt-Oder",
+      "geometry": {
+        "coordinates": [14.492934004514666, 52.33821631271155],
         "type": "Point"
       }
     }
