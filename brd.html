@@ -64,12 +64,18 @@
             <label class="Front" id="berlinLabel">Berlin</label>
           </div>
           <div class="dropDown" id="dropDown">
-            <select name="LandName" id="LandName" onchange="Linie()">
+            <select
+              name="LandName"
+              id="LandName"
+              onchange="Linie()"
+              onchange="commuting()"
+            >
               <option value="Alle">Alle</option>
               <option value="Brandenburg an der Havel">
                 Brandenburg an der Havel
               </option>
               <option value="Potsdam">Potsdam</option>
+              <option value="Cottbus, Stadt">Cottbus</option>
               <option value="Frankfurt (Oder)">Frankfurt(Oder)</option>
               <option value="Barnim">Barnim</option>
               <option value="Dahme-Spreewald">Dahme-Spreewald</option>

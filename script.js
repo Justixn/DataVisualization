@@ -77,14 +77,14 @@ d3.json("landkreise.geojson").then(function (json) {
 // .attr('fill', '#69b3a2');
 
 // Wählt Städte aus und fügt Pin an Geoposition hinzu
-var radius = 0;
+
 d3.json("staedte.geojson").then(function (json) {
   svg
     .selectAll(".pin")
     .data(json.features)
     .enter()
     .append("circle", ".pin")
-    //.filter((ort) => (ort.Insgesamt / 10) * 0.1)
+    //.style("r", zahl(z))
     .style("fill", "lightblue")
     .style("stroke", "blue")
     .style("stroke-width", 1)
@@ -190,6 +190,22 @@ function x(xA, xB, yA, yB, radius) {
   return (1 - ratio) * xA + ratio * xB;
 }
 
+function zahl(z) {
+  fetch("landkreise.geojson")
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (namen) {
+      for (kreis of namen) {
+        if (kreis.properties.GEN == z) {
+          return kreis.properties.destatis.population;
+        }
+      }
+    });
+
+  return response;
+}
+
 // Code für die Sichtbarkeit der Linien bei Knopfdruck
 var Linie = function () {
   var x = document.getElementById("LandName").value;
@@ -265,7 +281,26 @@ function colorchange() {
   }
 }
 
-function commuting() {}
+function commuting() {
+  var x = document.getElementById("LandName").value;
+  // var anzahl2 = document.getElementById("Anzahl2").innerHTML;
+  var out = "";
+
+  fetch("pendler.json")
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (kreise) {
+      zahlen = kreise.filter((land) => land.Arbeitsort == x);
+
+      zahlen = zahlen.Frauen;
+
+      document.getElementById("Anzahl1").innerHTML = zahlen;
+
+      return (out += zahlen);
+    });
+  return out;
+}
 
 fetch("pendler.json")
   .then(function (response) {

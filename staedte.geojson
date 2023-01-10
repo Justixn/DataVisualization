@@ -5,7 +5,6 @@
     {
       "type": "Feature",
       "name": "Potsdam",
-      "district": "Potsdam",
       "geometry": {
         "coordinates": [13.058736207098065, 52.40159716203581],
         "type": "Point"
@@ -13,7 +12,7 @@
     },
     {
       "type": "Feature",
-      "name": "Cottbus",
+      "name": "Cottbus, Stadt",
       "geometry": {
         "type": "Point",
         "coordinates": [14.336588310711107, 51.757348197438546]
