@@ -194,47 +194,66 @@ function x(xA, xB, yA, yB, radius) {
 
 // Code für die Sichtbarkeit der Linien bei Knopfdruck
 var Linie = function () {
-  commuting();
+  //commuting();
   var x = document.getElementById("LandName").value;
   var insgesamt = 0;
   fetch("pendler.json")
-  .then(res => res.json())
-  .then(data => {
-    var json1 = Object.values(data).filter(v => v.Arbeitsort != "Berlin");
-    var json = (Object.values(data).filter(v => v.Arbeitsort.startsWith("Berlin")));
-    var inBrandenburg = 0;
-    
-    for(var i = 0;i< json1.length;i++){
-      
-      if(document.getElementById("LandName").value == json1[i].Wohnort){
-        inBrandenburg += json1[i].Insgesamt;
-      }
-      
-    }
-   
-    for(var i = 0; i< json.length; i++){
-      if(document.getElementById("LandName").value == json[i].Wohnort){
-        insgesamt = inBrandenburg + json[i].Insgesamt;
-        document.getElementById("Anzahl").innerHTML = json[i].Insgesamt;
-        document.getElementById("Anzahl1").innerHTML = json[i].Frauen;
-        document.getElementById("Anzahl2").innerHTML = json[i].Männer;
-        document.getElementById("Anzahl3").innerHTML = json[i].AZB;
-        document.getElementById("Percent1").innerHTML = (Math.round((json[i].Frauen)/(json[i].Insgesamt)*100));
-        document.getElementById("Percent2").innerHTML = (Math.round((json[i].Männer)/(json[i].Insgesamt)*100));
-        document.getElementById("Percent3").innerHTML = (Math.round((json[i].AZB)/(json[i].Insgesamt)*100));
-        document.getElementById("stop1").setAttribute('offset', (Math.round((json[i].Insgesamt)/(insgesamt)*100))+"%");
-        document.getElementById("stop2").setAttribute('offset', (Math.round((json[i].Insgesamt)/(insgesamt)*100))+"%");
-        document.getElementById("stop3").setAttribute('offset', (Math.round((inBrandenburg)/(insgesamt)*100))+"%");
-        document.getElementById("FrontColor1").innerHTML = (Math.round((json[i].Insgesamt)/(insgesamt)*100))+"%";
-        document.getElementById("FrontColor2").innerHTML = (Math.round((inBrandenburg)/(insgesamt)*100))+"%";
-        
-        
-        
-      }
-    }
-    console.log(inBrandenburg);
+    .then((res) => res.json())
+    .then((data) => {
+      var json1 = Object.values(data).filter((v) => v.Arbeitsort != "Berlin");
+      var json = Object.values(data).filter((v) =>
+        v.Arbeitsort.startsWith("Berlin")
+      );
+      var inBrandenburg = 0;
 
-  })
+      for (var i = 0; i < json1.length; i++) {
+        if (document.getElementById("LandName").value == json1[i].Wohnort) {
+          inBrandenburg += json1[i].Insgesamt;
+        }
+      }
+
+      for (var i = 0; i < json.length; i++) {
+        if (document.getElementById("LandName").value == json[i].Wohnort) {
+          insgesamt = inBrandenburg + json[i].Insgesamt;
+          document.getElementById("Anzahl").innerHTML = json[i].Insgesamt;
+          document.getElementById("Anzahl1").innerHTML = json[i].Frauen;
+          document.getElementById("Anzahl2").innerHTML = json[i].Männer;
+          document.getElementById("Anzahl3").innerHTML = json[i].AZB;
+          document.getElementById("Percent1").innerHTML = Math.round(
+            (json[i].Frauen / json[i].Insgesamt) * 100
+          );
+          document.getElementById("Percent2").innerHTML = Math.round(
+            (json[i].Männer / json[i].Insgesamt) * 100
+          );
+          document.getElementById("Percent3").innerHTML = Math.round(
+            (json[i].AZB / json[i].Insgesamt) * 100
+          );
+          document
+            .getElementById("stop1")
+            .setAttribute(
+              "offset",
+              Math.round((json[i].Insgesamt / insgesamt) * 100) + "%"
+            );
+          document
+            .getElementById("stop2")
+            .setAttribute(
+              "offset",
+              Math.round((json[i].Insgesamt / insgesamt) * 100) + "%"
+            );
+          document
+            .getElementById("stop3")
+            .setAttribute(
+              "offset",
+              Math.round((inBrandenburg / insgesamt) * 100) + "%"
+            );
+          document.getElementById("FrontColor1").innerHTML =
+            Math.round((json[i].Insgesamt / insgesamt) * 100) + "%";
+          document.getElementById("FrontColor2").innerHTML =
+            Math.round((inBrandenburg / insgesamt) * 100) + "%";
+        }
+      }
+      console.log(inBrandenburg);
+    });
   svg
     .selectAll("line")
     .style("opacity", 0.2)
@@ -306,8 +325,6 @@ function colorchange() {
     }
   }
 }
-
-
 
 fetch("pendler.json")
   .then(function (response) {
