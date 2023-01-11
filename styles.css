@@ -22,7 +22,10 @@
 
   position: relative;
 }
-
+#Anzahl{
+  display: flex;
+  justify-content: space-around;
+}
 #LandName {
   background-color: #00060b;
   color: white;
@@ -69,7 +72,7 @@
 .Text {
   display: flex;
   justify-content: center;
-  height: 50px;
+  height: 20px;
   color: white;
 }
 #Penderbewegung {
