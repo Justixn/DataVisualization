@@ -190,6 +190,31 @@ function x(xA, xB, yA, yB, radius) {
 // Code für die Sichtbarkeit der Linien bei Knopfdruck
 var Linie = function () {
   var x = document.getElementById("LandName").value;
+  fetch("pendler.json")
+  .then(res => res.json())
+  .then(data => {
+    var json = (Object.values(data)
+    .filter(v => v.Arbeitsort
+      .startsWith("Berlin")));
+      
+    for(var i = 0; i< json.length; i++){
+      if(document.getElementById("LandName").value == json[i].Wohnort){
+        document.getElementById("Anzahl").innerHTML = json[i].Insgesamt;
+        document.getElementById("Anzahl1").innerHTML = json[i].Frauen;
+        document.getElementById("Anzahl2").innerHTML = json[i].Männer;
+        document.getElementById("Anzahl3").innerHTML = json[i].AZB;
+        document.getElementById("Percent1").innerHTML = (Math.round((json[i].Frauen)/(json[i].Insgesamt)*100));
+        document.getElementById("Percent2").innerHTML = (Math.round((json[i].Männer)/(json[i].Insgesamt)*100));
+        document.getElementById("Percent3").innerHTML = (Math.round((json[i].AZB)/(json[i].Insgesamt)*100));
+        document.getElementById("stop1").setAttribute('offset', (Math.round((json[i].Frauen)/(json[i].Insgesamt)*100))+"%");
+        document.getElementById("stop2").setAttribute('offset', (Math.round((json[i].Frauen)/(json[i].Insgesamt)*100))+"%");
+        document.getElementById("stop3").setAttribute('offset', (Math.round((json[i].Männer)/(json[i].Insgesamt)*100))+"%");
+        console.log((Math.round((json[i].AZB)/(json[i].Insgesamt)*100))+"%");
+        
+      }
+    }
+
+  })
   svg
     .selectAll("line")
     .style("visibility", "hidden")
@@ -256,6 +281,8 @@ function colorchange() {
     }
   }
 }
+
+
 
 fetch("pendler.json")
   .then(function (response) {
