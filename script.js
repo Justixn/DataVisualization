@@ -87,7 +87,7 @@ d3.json("staedte.geojson").then(function (json) {
     .style("r", function (d) {
       return d.population / 5000;
     })
-    .style("fill", "lightblue")
+    .style("fill", "#3E709E")
     .style("stroke", "blue")
     .style("stroke-width", 1)
     .style("visibility", "visible")
@@ -192,24 +192,9 @@ function x(xA, xB, yA, yB, radius) {
   return (1 - ratio) * xA + ratio * xB;
 }
 
-function zahl(z) {
-  fetch("landkreise.geojson")
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (namen) {
-      for (kreis of namen) {
-        if (kreis.properties.GEN == z) {
-          return kreis.properties.destatis.population;
-        }
-      }
-    });
-
-  return response;
-}
-
 // Code für die Sichtbarkeit der Linien bei Knopfdruck
 var Linie = function () {
+  commuting();
   var x = document.getElementById("LandName").value;
   svg
     .selectAll("line")
@@ -281,27 +266,6 @@ function colorchange() {
       myFront[counter].style.color = "white";
     }
   }
-}
-
-function commuting() {
-  var x = document.getElementById("LandName").value;
-  // var anzahl2 = document.getElementById("Anzahl2").innerHTML;
-  var out = "";
-
-  fetch("pendler.json")
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (kreise) {
-      zahlen = kreise.filter((land) => land.Arbeitsort == x);
-
-      zahlen = zahlen.Frauen;
-
-      document.getElementById("Anzahl1").innerHTML = zahlen;
-
-      return (out += zahlen);
-    });
-  return out;
 }
 
 fetch("pendler.json")
