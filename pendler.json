@@ -4152,5 +4152,30 @@
     "Deutsche": "*",
     "Ausländer_Sonst": "*",
     "AZB": 0
+  },
+  {
+    "A/E": "E",
+    "Wohnort": "Berlin, Stadt",
+    "Nummer": "120",
+    "Arbeitsort": "Cottbus",
+    "Insgesamt": 847,
+    "Männer": 558,
+    "Frauen": 289,
+    "Deutsche": "*",
+    "Ausländer_Sonst": "*",
+    "AZB": 0
+  }
+  ,
+  {
+    "A/E": "E",
+    "Wohnort": "Berlin, Stadt",
+    "Nummer": "120",
+    "Arbeitsort": "Ostprignitz-Ruppin",
+    "Insgesamt": 1.078,
+    "Männer": 630,
+    "Frauen": 448,
+    "Deutsche": "*",
+    "Ausländer_Sonst": "*",
+    "AZB": 0
   }
 ]
