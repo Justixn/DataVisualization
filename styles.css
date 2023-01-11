@@ -22,7 +22,7 @@
 
   position: relative;
 }
-#Anzahl{
+#Anzahl {
   display: flex;
   justify-content: space-around;
 }
@@ -45,28 +45,23 @@
   justify-content: space-around;
 }
 
-#LandName{
-  background-color: #00060B;
+#LandName {
+  background-color: #00060b;
   color: white;
-
 }
 
-.Zahl{
+.Zahl {
   color: white;
-  
 }
 
-
-.flexContainer{
+.flexContainer {
   display: flex;
   justify-content: space-around;
-  height:50px;
-
+  height: 50px;
 }
-.flexContainer1{
+.flexContainer1 {
   display: flex;
   justify-content: space-around;
-  
 }
 
 .Text {
@@ -79,7 +74,7 @@
   font-size: 9px;
   color: white;
 }
-#Penderbewegung{
+#Penderbewegung {
   font-size: 9px;
   color: white;
 }
@@ -92,7 +87,7 @@
 
   border-radius: 20px;
   padding: 30px;
-  top: 200px;
+  top: 45px;
   left: 800px;
 }
 .rectangle1 {

@@ -25,7 +25,7 @@
 
     <script type="text/javascript" src="./d3.min.js"></script>
   </head>
-  <body>
+  <body onload="toBerlin()">
     <!-- Wenn Styling der Buttons nicht funktioniert diese hier auswählen!
       <button type="button" onclick="Linie(1)">On</button>
       <button type="button" onclick="Linie(0)">Off</button>
@@ -45,7 +45,7 @@
       <div class="rectangle" id="rectangle">
         <label id="Title" class="Front">Pendlerverkehr in Ostdeutschland</label>
         <div class="Schalter">
-          <label id="Einpendler" class="Front">Auspendler</label>
+          <label id="Auspendler" class="Front">Auspendler</label>
 
           <label class="switch" id="switch">
             <input
@@ -57,7 +57,7 @@
             <span class="slider round"></span>
           </label>
 
-          <label id="Auspendler" class="Front">Einpendler</label>
+          <label id="Einpendler" class="Front">Einpendler</label>
 
           <div id="berlinTag" class="berlinTag">
             <label class="Front" id="berlinLabel">Berlin</label>
@@ -104,10 +104,23 @@
               <path d="M2,2 L10,6 L2,10 L6,6 L2,2" style="fill: white"></path>
             </marker>
           </defs>
+        </svg>
 
-          <!-- <line x1="0" y1="0" x2="200" y2="50"  stroke="red" stroke-width="2" marker-end="url(#arrow)"/> -->
-
-          <!-- <path d="M20,70 T80,100 T160,80 T200,90" fill="white" stroke="red" stroke-width="2" marker-start="url(#arrow)" marker-mid="url(#arrow)" marker-end="url(#arrow)"/> -->
+        <svg width="300" height="200">
+          <defs>
+            <marker
+              id="arrow2"
+              markerUnits="strokeWidth"
+              markerWidth="12"
+              markerHeight="12"
+              viewBox="5 0 12 12"
+              refX="6"
+              refY="6"
+              orient="auto"
+            >
+              <path d="M2,2 L10,6 L2,10 L6,6 L2,2" style="fill: black"></path>
+            </marker>
+          </defs>
         </svg>
 
         <div class="rectangle1" id="rectangle1">
