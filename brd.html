@@ -69,6 +69,7 @@
                 Brandenburg an der Havel
               </option>
               <option value="Potsdam">Potsdam</option>
+              <option value="Cottbus">Cottbus</option>
               <option value="Frankfurt (Oder)">Frankfurt(Oder)</option>
               <option value="Barnim">Barnim</option>
               <option value="Dahme-Spreewald">Dahme-Spreewald</option>
@@ -159,8 +160,24 @@
               height="30"
               fill="url(#Gradient1)"
             />
-            <text id="FrontColor1" class="FrontColor" x="20" y="30" fill="white">33%</text>
-            <text id="FrontColor2" class="FrontColor" x="100" y="30" fill="white">66%</text>
+            <text
+              id="FrontColor1"
+              class="FrontColor"
+              x="20"
+              y="30"
+              fill="white"
+            >
+              33%
+            </text>
+            <text
+              id="FrontColor2"
+              class="FrontColor"
+              x="100"
+              y="30"
+              fill="white"
+            >
+              66%
+            </text>
 
             <circle
               id="circle1"
@@ -193,40 +210,6 @@
           </svg>
         </div>
       </div>
-    </div>
-
-    <div style="text-align: center">
-      <table>
-        <thread>
-          <tr>
-            <th>Wohnort</th>
-            <th>Nummer</th>
-            <th>Arbeitsort</th>
-            <th>Insgesamt</th>
-            <th>Männer</th>
-            <th>Frauen</th>
-            <th>Deutsche</th>
-            <th>Ausländer_Sonst</th>
-            <th>AZB</th>
-          </tr>
-        </thread>
-        <tbody id="data-output"></tbody>
-      </table>
-      <br />
-
-      <button
-        class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
-        onclick="Linie(1)"
-      >
-        On
-      </button>
-      <button
-        class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent"
-        onclick="Linie(0)"
-      >
-        Off
-      </button>
-      <br />
     </div>
 
     <!--<textarea id="display" style="width: 1000px; height: 1000px"><p id="elements"> </p></textarea>

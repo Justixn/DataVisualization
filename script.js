@@ -77,16 +77,21 @@ d3.json("landkreise.geojson").then(function (json) {
 // .attr('fill', '#69b3a2');
 
 // Wählt Städte aus und fügt Pin an Geoposition hinzu
+
 d3.json("staedte.geojson").then(function (json) {
   svg
     .selectAll(".pin")
     .data(json.features)
     .enter()
     .append("circle", ".pin")
-    .attr("r", 5)
-    .style("fill", "none")
-    .style("stroke", "white")
-    .style("stroke-width", 2)
+    .style("r", function (d) {
+      return d.population / 5000;
+    })
+    .style("fill", "#3E709E")
+    .style("stroke", "blue")
+    .style("stroke-width", 1)
+    .style("visibility", "visible")
+    .style("opacity", 0.2)
 
     .attr("transform", function (d) {
       return (
@@ -96,27 +101,26 @@ d3.json("staedte.geojson").then(function (json) {
       );
     });
 
-  //Fügt Städte Namen an Pin hinzu
-  // svg
-  //   .selectAll(".pin")
-  //   .data(json.features)
-  //   .enter()
-  //   .append("text")
-  //   .text(function (d) {
-  //     return d.properties.name;
-  //   })
-  //   .style("text-anchor", "middle")
-  //   .style("font-size", "17px")
-  //   .attr("transform", function (d) {
-  //     return (
-  //       "translate(" +
-  //       projection([
-  //         d.geometry.coordinates[0],
-  //         d.geometry.coordinates[1] + 0.06,
-  //       ]) +
-  //       ")"
-  //     );
-  //   });
+  svg
+    .selectAll(".pin")
+    .data(json.features)
+    .enter()
+    .append("circle", ".pin")
+    .attr("r", 5)
+    .style("fill", "none")
+    .style("stroke", "white")
+    .style("stroke-width", 2)
+    .style("visibility", "visible")
+    .style("opacity", 0.2)
+
+    .attr("transform", function (d) {
+      return (
+        "translate(" +
+        projection([d.geometry.coordinates[0], d.geometry.coordinates[1]]) +
+        ")"
+      );
+    });
+
   //Fügt eine Linie an jedem Pin an. Ziel Koordinate ist Berlin
   svg
     .selectAll("line")
@@ -162,7 +166,8 @@ d3.json("staedte.geojson").then(function (json) {
     .attr("marker-end", "url(#arrow)")
     .style("stroke", "white")
     .style("stroke-width", 2)
-    .style("visibility", "hidden");
+    .style("visibility", "visible")
+    .style("opacity", 0.2);
 });
 
 function y(xA, xB, yA, yB, radius) {
@@ -189,51 +194,76 @@ function x(xA, xB, yA, yB, radius) {
 
 // Code für die Sichtbarkeit der Linien bei Knopfdruck
 var Linie = function () {
+  //commuting();
   var x = document.getElementById("LandName").value;
   var insgesamt = 0;
   fetch("pendler.json")
-  .then(res => res.json())
-  .then(data => {
-    var json1 = Object.values(data).filter(v => v.Arbeitsort != "Berlin");
-    var json = (Object.values(data).filter(v => v.Arbeitsort.startsWith("Berlin")));
-    var inBrandenburg = 0;
-    
-    for(var i = 0;i< json1.length;i++){
-      
-      if(document.getElementById("LandName").value == json1[i].Wohnort){
-        inBrandenburg += json1[i].Insgesamt;
-      }
-      
-    }
-   
-    for(var i = 0; i< json.length; i++){
-      if(document.getElementById("LandName").value == json[i].Wohnort){
-        insgesamt = inBrandenburg + json[i].Insgesamt;
-        document.getElementById("Anzahl").innerHTML = json[i].Insgesamt;
-        document.getElementById("Anzahl1").innerHTML = json[i].Frauen;
-        document.getElementById("Anzahl2").innerHTML = json[i].Männer;
-        document.getElementById("Anzahl3").innerHTML = json[i].AZB;
-        document.getElementById("Percent1").innerHTML = (Math.round((json[i].Frauen)/(json[i].Insgesamt)*100));
-        document.getElementById("Percent2").innerHTML = (Math.round((json[i].Männer)/(json[i].Insgesamt)*100));
-        document.getElementById("Percent3").innerHTML = (Math.round((json[i].AZB)/(json[i].Insgesamt)*100));
-        document.getElementById("stop1").setAttribute('offset', (Math.round((json[i].Insgesamt)/(insgesamt)*100))+"%");
-        document.getElementById("stop2").setAttribute('offset', (Math.round((json[i].Insgesamt)/(insgesamt)*100))+"%");
-        document.getElementById("stop3").setAttribute('offset', (Math.round((inBrandenburg)/(insgesamt)*100))+"%");
-        document.getElementById("FrontColor1").innerHTML = (Math.round((json[i].Insgesamt)/(insgesamt)*100))+"%";
-        document.getElementById("FrontColor2").innerHTML = (Math.round((inBrandenburg)/(insgesamt)*100))+"%";
-        
-        
-        
-      }
-    }
-    console.log(inBrandenburg);
+    .then((res) => res.json())
+    .then((data) => {
+      var json1 = Object.values(data).filter((v) => v.Arbeitsort != "Berlin");
+      var json = Object.values(data).filter((v) =>
+        v.Arbeitsort.startsWith("Berlin")
+      );
+      var inBrandenburg = 0;
 
-  })
+      for (var i = 0; i < json1.length; i++) {
+        if (document.getElementById("LandName").value == json1[i].Wohnort) {
+          inBrandenburg += json1[i].Insgesamt;
+        }
+      }
+
+      for (var i = 0; i < json.length; i++) {
+        if (document.getElementById("LandName").value == json[i].Wohnort) {
+          insgesamt = inBrandenburg + json[i].Insgesamt;
+          document.getElementById("Anzahl").innerHTML = json[i].Insgesamt;
+          document.getElementById("Anzahl1").innerHTML = json[i].Frauen;
+          document.getElementById("Anzahl2").innerHTML = json[i].Männer;
+          document.getElementById("Anzahl3").innerHTML = json[i].AZB;
+          document.getElementById("Percent1").innerHTML = Math.round(
+            (json[i].Frauen / json[i].Insgesamt) * 100
+          );
+          document.getElementById("Percent2").innerHTML = Math.round(
+            (json[i].Männer / json[i].Insgesamt) * 100
+          );
+          document.getElementById("Percent3").innerHTML = Math.round(
+            (json[i].AZB / json[i].Insgesamt) * 100
+          );
+          document
+            .getElementById("stop1")
+            .setAttribute(
+              "offset",
+              Math.round((json[i].Insgesamt / insgesamt) * 100) + "%"
+            );
+          document
+            .getElementById("stop2")
+            .setAttribute(
+              "offset",
+              Math.round((json[i].Insgesamt / insgesamt) * 100) + "%"
+            );
+          document
+            .getElementById("stop3")
+            .setAttribute(
+              "offset",
+              Math.round((inBrandenburg / insgesamt) * 100) + "%"
+            );
+          document.getElementById("FrontColor1").innerHTML =
+            Math.round((json[i].Insgesamt / insgesamt) * 100) + "%";
+          document.getElementById("FrontColor2").innerHTML =
+            Math.round((inBrandenburg / insgesamt) * 100) + "%";
+        }
+      }
+      console.log(inBrandenburg);
+    });
   svg
     .selectAll("line")
-    .style("visibility", "hidden")
+    .style("opacity", 0.2)
     .filter((ort) => ort.name == x)
-    .style("visibility", "visible");
+    .style("opacity", 0.9999);
+  svg
+    .selectAll("circle")
+    .style("opacity", 0.2)
+    .filter((ort) => ort.name == x)
+    .style("opacity", 0.9999);
 };
 
 // Farbänderungen
@@ -295,8 +325,6 @@ function colorchange() {
     }
   }
 }
-
-
 
 fetch("pendler.json")
   .then(function (response) {
