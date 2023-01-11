@@ -206,16 +206,12 @@ var Linie = function () {
       );
       var json2 = Object.values(data).filter((v) => v.Wohnort.startsWith("Berlin"));
       var inBrandenburg = 0;
-      var auspendlerM = 0;
-      var auspendlerF = 0;
-      var auspendlerAZ = 0;
+      
 
       for (var i = 0; i < json1.length; i++) {
         if (document.getElementById("LandName").value == json1[i].Wohnort) {
           inBrandenburg += json1[i].Insgesamt;
-          auspendlerM += json1[i].Männer;
-          auspendlerF += json1[i].Frauen;
-          auspendlerAZ += json1[i].AZB;
+         
           
         }
 
@@ -224,16 +220,22 @@ var Linie = function () {
       
       for(var i = 0; i < json2.length; i++){
         if(document.getElementById("LandName").value == json2[i].Arbeitsort && toggle.checked == false){
+
           document.getElementById("Anzahl").innerHTML = json2[i].Insgesamt;
           document.getElementById("Anzahl1").innerHTML = json2[i].Frauen;
           document.getElementById("Anzahl2").innerHTML = json2[i].Männer;
           document.getElementById("Anzahl3").innerHTML = json2[i].AZB;
-          document.getElementById("Percent1").innerHTML = Math.round((json2[i].Frauen / json[i].Insgesamt) * 100);
+          document.getElementById("Percent1").innerHTML = Math.round((json2[i].Frauen / json2[i].Insgesamt) * 100);
           document.getElementById("Percent2").innerHTML = Math.round((json2[i].Männer / json2[i].Insgesamt) * 100);
-          document.getElementById("Percent3").innerHTML = Math.round((json2[i],AZB / json2[i].Insgesamt) * 100);
-          document.getElementById("stop1").setAttribute("offset",Math.round((json2[i].Frauen / json[i].Insgesamt) * 100) );
-          document.getElementById("stop2").setAttribute("offset",Math.round((json2[i].Frauen / json[i].Insgesamt) * 100) );
-          document.getElementById("stop3").setAttribute("offset",Math.round((json2[i].Frauen / json[i].Insgesamt) * 100) );
+          document.getElementById("Percent3").innerHTML = Math.round((json2[i].AZB / json2[i].Insgesamt) * 100);
+          document.getElementById("stop1").setAttribute("offset",Math.round((json2[i].Frauen / json2[i].Insgesamt) * 100) );
+          document.getElementById("stop2").setAttribute("offset",Math.round((json2[i].Frauen / json2[i].Insgesamt) * 100) );
+          document.getElementById("stop3").setAttribute("offset",Math.round((json2[i].Frauen / json2[i].Insgesamt) * 100) );
+          document.getElementById("FrontColor1").innerHTML =
+            Math.round((13.9)) + "%";
+          document.getElementById("FrontColor2").innerHTML =
+            Math.round((86.1)) + "%";
+      
         }
       }
 
@@ -276,8 +278,9 @@ var Linie = function () {
           document.getElementById("FrontColor2").innerHTML =
             Math.round((inBrandenburg / insgesamt) * 100) + "%";
         }
+        
       }
-      console.log(inBrandenburg);
+      
     });
   svg
     .selectAll("line")
@@ -293,6 +296,93 @@ var Linie = function () {
 
 // Farbänderungen
 function colorchange() {
+  var x = document.getElementById("LandName").value;
+  var insgesamt = 0;
+  fetch("pendler.json")
+    .then((res) => res.json())
+    .then((data) => {
+      var json1 = Object.values(data).filter((v) => v.Arbeitsort != "Berlin");
+      var json = Object.values(data).filter((v) =>
+        v.Arbeitsort.startsWith("Berlin")
+      );
+      var json2 = Object.values(data).filter((v) => v.Wohnort.startsWith("Berlin"));
+      var inBrandenburg = 0;
+      
+
+      for (var i = 0; i < json1.length; i++) {
+        if (document.getElementById("LandName").value == json1[i].Wohnort) {
+          inBrandenburg += json1[i].Insgesamt;
+         
+          
+        }
+
+
+      }
+      
+      for(var i = 0; i < json2.length; i++){
+        if(document.getElementById("LandName").value == json2[i].Arbeitsort && toggle.checked == false){
+
+          document.getElementById("Anzahl").innerHTML = json2[i].Insgesamt;
+          document.getElementById("Anzahl1").innerHTML = json2[i].Frauen;
+          document.getElementById("Anzahl2").innerHTML = json2[i].Männer;
+          document.getElementById("Anzahl3").innerHTML = json2[i].AZB;
+          document.getElementById("Percent1").innerHTML = Math.round((json2[i].Frauen / json2[i].Insgesamt) * 100);
+          document.getElementById("Percent2").innerHTML = Math.round((json2[i].Männer / json2[i].Insgesamt) * 100);
+          document.getElementById("Percent3").innerHTML = Math.round((json2[i].AZB / json2[i].Insgesamt) * 100);
+          document.getElementById("stop1").setAttribute("offset",Math.round((json2[i].Frauen / json2[i].Insgesamt) * 100) );
+          document.getElementById("stop2").setAttribute("offset",Math.round((json2[i].Frauen / json2[i].Insgesamt) * 100) );
+          document.getElementById("stop3").setAttribute("offset",Math.round((json2[i].Frauen / json2[i].Insgesamt) * 100) );
+          document.getElementById("FrontColor1").innerHTML =
+            Math.round((13.9)) + "%";
+          document.getElementById("FrontColor2").innerHTML =
+            Math.round((86.1)) + "%";
+      
+        }
+      }
+
+      for (var i = 0; i < json.length; i++) {
+        if (document.getElementById("LandName").value == json[i].Wohnort && toggle.checked == true) {
+          insgesamt = inBrandenburg + json[i].Insgesamt;
+          document.getElementById("Anzahl").innerHTML = json[i].Insgesamt;
+          document.getElementById("Anzahl1").innerHTML = json[i].Frauen;
+          document.getElementById("Anzahl2").innerHTML = json[i].Männer;
+          document.getElementById("Anzahl3").innerHTML = json[i].AZB;
+          document.getElementById("Percent1").innerHTML = Math.round(
+            (json[i].Frauen / json[i].Insgesamt) * 100
+          );
+          document.getElementById("Percent2").innerHTML = Math.round(
+            (json[i].Männer / json[i].Insgesamt) * 100
+          );
+          document.getElementById("Percent3").innerHTML = Math.round(
+            (json[i].AZB / json[i].Insgesamt) * 100
+          );
+          document
+            .getElementById("stop1")
+            .setAttribute(
+              "offset",
+              Math.round((json[i].Insgesamt / insgesamt) * 100) + "%"
+            );
+          document
+            .getElementById("stop2")
+            .setAttribute(
+              "offset",
+              Math.round((json[i].Insgesamt / insgesamt) * 100) + "%"
+            );
+          document
+            .getElementById("stop3")
+            .setAttribute(
+              "offset",
+              Math.round((inBrandenburg / insgesamt) * 100) + "%"
+            );
+          document.getElementById("FrontColor1").innerHTML =
+            Math.round((json[i].Insgesamt / insgesamt) * 100) + "%";
+          document.getElementById("FrontColor2").innerHTML =
+            Math.round((inBrandenburg / insgesamt) * 100) + "%";
+        }
+        
+      }
+      
+    });
   if (toggle.checked == false) {
     document.getElementById("rectangle").style.background =
       "rgb(230, 136, 136)";
