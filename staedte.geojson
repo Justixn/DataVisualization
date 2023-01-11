@@ -163,6 +163,15 @@
         "coordinates": [14.512395743279882, 51.96331899596143],
         "type": "Point"
       }
+    },
+    {
+      "type": "Feature",
+      "name": "Berlin",
+      "population": 0,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [13.394992707079126, 52.509120008023274]
+      }
     }
   ]
 }

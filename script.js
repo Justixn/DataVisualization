@@ -63,112 +63,243 @@ d3.json("landkreise.geojson").then(function (json) {
     });
 });
 
-// var svg = d3.select("#arc").append("svg").attr("width", 1000).attr("height", 400)
-// svg
-// .append("path")
-// .attr("transform", "translate(400,200)")
-// .attr("d", d3.arc()
-//   .innerRadius( 100 )
-//   .outerRadius( 150 )
-//   .startAngle( 3.14 )     // It's in radian, so Pi = 3.14 = bottom.
-//   .endAngle( 6.28 )       // 2*Pi = 6.28 = top
-//   )
-// .attr('stroke', 'black')
-// .attr('fill', '#69b3a2');
+function reset() {
+  svg.selectAll("circle").remove();
+  svg.selectAll("line").remove();
+}
+
+function fromBerlin() {
+  reset();
+  d3.json("staedte.geojson").then(function (json) {
+    svg
+      .selectAll(".pin")
+      .data(json.features)
+      .enter()
+      .append("circle", ".pin")
+      .style("r", function (d) {
+        return d.population / 5000;
+      })
+      .style("fill", "rgb(230, 136, 136)")
+      .style("stroke", "red")
+      .style("stroke-width", 1)
+      .style("visibility", "visible")
+      .style("opacity", 0.2)
+
+      .attr("transform", function (d) {
+        return (
+          "translate(" +
+          projection([d.geometry.coordinates[0], d.geometry.coordinates[1]]) +
+          ")"
+        );
+      });
+
+    svg
+      .selectAll(".pin")
+      .data(json.features)
+      .enter()
+      .append("circle", ".pin")
+      .attr("r", 5)
+      .style("fill", "black")
+      .style("stroke", "white")
+      .style("stroke-width", 2)
+      .style("visibility", "visible")
+      .style("opacity", 0.2)
+
+      .attr("transform", function (d) {
+        return (
+          "translate(" +
+          projection([d.geometry.coordinates[0], d.geometry.coordinates[1]]) +
+          ")"
+        );
+      });
+
+    svg
+      .selectAll(".pin")
+      .data(json.features)
+      .enter()
+      .append("circle", ".pin")
+      .filter((ort) => ort.name == "Berlin")
+      .attr("r", 5)
+      .style("fill", "rgb(230, 136, 136)")
+      .style("stroke", "black")
+      .style("stroke-width", 2)
+      .style("visibility", "visible")
+      .style("opacity", 1)
+
+      .attr("transform", function (d) {
+        return (
+          "translate(" +
+          projection([d.geometry.coordinates[0], d.geometry.coordinates[1]]) +
+          ")"
+        );
+      });
+
+    //Fügt eine Linie an jedem Pin an. Ziel Koordinate ist Berlin
+    svg
+      .selectAll("line")
+      .data(json.features)
+      .enter()
+      .append("line")
+      .attr("x2", function (d) {
+        return x(
+          projection(berlin)[0],
+          projection(d.geometry.coordinates)[0],
+          projection(berlin)[1],
+          projection(d.geometry.coordinates)[1],
+          10
+        );
+      })
+      .attr("y2", function (d) {
+        return y(
+          projection(berlin)[0],
+          projection(d.geometry.coordinates)[0],
+          projection(berlin)[1],
+          projection(d.geometry.coordinates)[1],
+          10
+        );
+      })
+      .attr("x1", function (d) {
+        return x(
+          projection(d.geometry.coordinates)[0],
+          projection(berlin)[0],
+          projection(d.geometry.coordinates)[1],
+          projection(berlin)[1],
+          5
+        );
+      })
+      .attr("y1", function (d) {
+        return y(
+          projection(d.geometry.coordinates)[0],
+          projection(berlin)[0],
+          projection(d.geometry.coordinates)[1],
+          projection(berlin)[1],
+          5
+        );
+      })
+      .attr("marker-end", "url(#arrow2)")
+      .style("stroke", "black")
+      .style("stroke-width", 2)
+      .style("visibility", "visible")
+      .style("opacity", 0.2);
+  });
+}
 
 // Wählt Städte aus und fügt Pin an Geoposition hinzu
+function toBerlin() {
+  reset();
+  d3.json("staedte.geojson").then(function (json) {
+    svg
+      .selectAll(".pin")
+      .data(json.features)
+      .enter()
+      .append("circle", ".pin")
+      .style("r", function (d) {
+        return d.population / 5000;
+      })
+      .style("fill", "#3E709E")
+      .style("stroke", "blue")
+      .style("stroke-width", 1)
+      .style("visibility", "visible")
+      .style("opacity", 0.2)
 
-d3.json("staedte.geojson").then(function (json) {
-  svg
-    .selectAll(".pin")
-    .data(json.features)
-    .enter()
-    .append("circle", ".pin")
-    .style("r", function (d) {
-      return d.population / 5000;
-    })
-    .style("fill", "#3E709E")
-    .style("stroke", "blue")
-    .style("stroke-width", 1)
-    .style("visibility", "visible")
-    .style("opacity", 0.2)
+      .attr("transform", function (d) {
+        return (
+          "translate(" +
+          projection([d.geometry.coordinates[0], d.geometry.coordinates[1]]) +
+          ")"
+        );
+      });
 
-    .attr("transform", function (d) {
-      return (
-        "translate(" +
-        projection([d.geometry.coordinates[0], d.geometry.coordinates[1]]) +
-        ")"
-      );
-    });
+    svg
+      .selectAll(".pin")
+      .data(json.features)
+      .enter()
+      .append("circle", ".pin")
+      .filter((ort) => ort.name == "Berlin")
+      .attr("r", 5)
+      .style("fill", "black")
+      .style("stroke", "white")
+      .style("stroke-width", 2)
+      .style("visibility", "visible")
+      .style("opacity", 1)
 
-  svg
-    .selectAll(".pin")
-    .data(json.features)
-    .enter()
-    .append("circle", ".pin")
-    .attr("r", 5)
-    .style("fill", "none")
-    .style("stroke", "white")
-    .style("stroke-width", 2)
-    .style("visibility", "visible")
-    .style("opacity", 0.2)
+      .attr("transform", function (d) {
+        return (
+          "translate(" +
+          projection([d.geometry.coordinates[0], d.geometry.coordinates[1]]) +
+          ")"
+        );
+      });
 
-    .attr("transform", function (d) {
-      return (
-        "translate(" +
-        projection([d.geometry.coordinates[0], d.geometry.coordinates[1]]) +
-        ")"
-      );
-    });
+    svg
+      .selectAll(".pin")
+      .data(json.features)
+      .enter()
+      .append("circle", ".pin")
+      .attr("r", 5)
+      .style("fill", "none")
+      .style("stroke", "white")
+      .style("stroke-width", 2)
+      .style("visibility", "visible")
+      .style("opacity", 0.2)
 
-  //Fügt eine Linie an jedem Pin an. Ziel Koordinate ist Berlin
-  svg
-    .selectAll("line")
-    .data(json.features)
-    .enter()
-    .append("line")
-    .attr("x1", function (d) {
-      return x(
-        projection(berlin)[0],
-        projection(d.geometry.coordinates)[0],
-        projection(berlin)[1],
-        projection(d.geometry.coordinates)[1],
-        5
-      );
-    })
-    .attr("y1", function (d) {
-      return y(
-        projection(berlin)[0],
-        projection(d.geometry.coordinates)[0],
-        projection(berlin)[1],
-        projection(d.geometry.coordinates)[1],
-        5
-      );
-    })
-    .attr("x2", function (d) {
-      return x(
-        projection(d.geometry.coordinates)[0],
-        projection(berlin)[0],
-        projection(d.geometry.coordinates)[1],
-        projection(berlin)[1],
-        10
-      );
-    })
-    .attr("y2", function (d) {
-      return y(
-        projection(d.geometry.coordinates)[0],
-        projection(berlin)[0],
-        projection(d.geometry.coordinates)[1],
-        projection(berlin)[1],
-        10
-      );
-    })
-    .attr("marker-end", "url(#arrow)")
-    .style("stroke", "white")
-    .style("stroke-width", 2)
-    .style("visibility", "visible")
-    .style("opacity", 0.2);
-});
+      .attr("transform", function (d) {
+        return (
+          "translate(" +
+          projection([d.geometry.coordinates[0], d.geometry.coordinates[1]]) +
+          ")"
+        );
+      });
+
+    //Fügt eine Linie an jedem Pin an. Ziel Koordinate ist Berlin
+    svg
+      .selectAll("line")
+      .data(json.features)
+      .enter()
+      .append("line")
+      .attr("x1", function (d) {
+        return x(
+          projection(berlin)[0],
+          projection(d.geometry.coordinates)[0],
+          projection(berlin)[1],
+          projection(d.geometry.coordinates)[1],
+          5
+        );
+      })
+      .attr("y1", function (d) {
+        return y(
+          projection(berlin)[0],
+          projection(d.geometry.coordinates)[0],
+          projection(berlin)[1],
+          projection(d.geometry.coordinates)[1],
+          5
+        );
+      })
+      .attr("x2", function (d) {
+        return x(
+          projection(d.geometry.coordinates)[0],
+          projection(berlin)[0],
+          projection(d.geometry.coordinates)[1],
+          projection(berlin)[1],
+          10
+        );
+      })
+      .attr("y2", function (d) {
+        return y(
+          projection(d.geometry.coordinates)[0],
+          projection(berlin)[0],
+          projection(d.geometry.coordinates)[1],
+          projection(berlin)[1],
+          10
+        );
+      })
+      .attr("marker-end", "url(#arrow)")
+      .style("stroke", "white")
+      .style("stroke-width", 2)
+      .style("visibility", "visible")
+      .style("opacity", 0.2);
+  });
+}
 
 function y(xA, xB, yA, yB, radius) {
   d = Math.sqrt((xB - xA) * (xB - xA) + (yB - yA) * (yB - yA));
@@ -262,13 +393,19 @@ var Linie = function () {
   svg
     .selectAll("circle")
     .style("opacity", 0.2)
-    .filter((ort) => ort.name == x)
+    .filter((ort) => ort.name == x || ort.name == "Berlin")
     .style("opacity", 0.9999);
+  // svg
+  //   .select("circle")
+  //   .style("opacity", 0.2)
+  //   .filter((ort) => ort.name == "Berlin")
+  //   .style("opacity", 0.9999);
 };
 
 // Farbänderungen
 function colorchange() {
   if (toggle.checked == false) {
+    fromBerlin();
     document.getElementById("rectangle").style.background =
       "rgb(230, 136, 136)";
     document.getElementById("rectangle1").style.background =
@@ -300,6 +437,7 @@ function colorchange() {
     }
   }
   if (toggle.checked == true) {
+    toBerlin();
     document.getElementById("rectangle").style.background = "#011A31";
     document.getElementById("rectangle1").style.background = "#00060B";
     document.getElementById("LandName").style.background = "#00060B";
@@ -325,69 +463,3 @@ function colorchange() {
     }
   }
 }
-
-fetch("pendler.json")
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (products) {
-    let placeholder = document.querySelector("#data-output");
-    let out = "";
-
-    function percentage(partialValue, totalValue) {
-      return (100 * partialValue) / totalValue;
-    }
-
-    var nachBerlin = products.filter(
-      (stadt) =>
-        stadt.Arbeitsort == "Berlin, Stadt" &&
-        (stadt.Wohnort == "Brandenburg an der Havel, St." ||
-          stadt.Wohnort == "Cottbus, Stadt" ||
-          stadt.Wohnort == "Potsdam, Stadt")
-    );
-
-    nachBerlin = nachBerlin.sort(function (a, b) {
-      return (
-        percentage(b.Frauen, b.Insgesamt) - percentage(a.Frauen, a.Insgesamt)
-      );
-    });
-
-    var vonBerlin = products.filter(
-      (stadt) =>
-        stadt.Wohnort == "Berlin, Stadt" &&
-        (stadt.Arbeitsort == "Brandenburg an der Havel, St." ||
-          stadt.Arbeitsort == "Cottbus, Stadt" ||
-          stadt.Arbeitsort == "Potsdam, Stadt")
-    );
-    for (let product of nachBerlin) {
-      out += `
-            <tr>
-               <td>${product.Wohnort}</td>
-               <td>${product.Nummer}</td>
-               <td>${product.Arbeitsort}</td>
-               <td>${product.Insgesamt}</td>
-               <td>${product.Männer}</td>
-               <td>${product.Frauen}</td>
-               <td>${product.Deutsche}</td>
-               <td>${product.Ausländer_Sonst}</td>
-               <td>${product.AZB}</td>
-            </tr>`;
-    }
-
-    for (let product of vonBerlin) {
-      out += `
-            <tr>
-               <td>${product.Wohnort}</td>
-               <td>${product.Nummer}</td>
-               <td>${product.Arbeitsort}</td>
-               <td>${product.Insgesamt}</td>
-               <td>${product.Männer}</td>
-               <td>${product.Frauen}</td>
-               <td>${product.Deutsche}</td>
-               <td>${product.Ausländer_Sonst}</td>
-               <td>${product.AZB}</td>
-            </tr>`;
-    }
-
-    placeholder.innerHTML = out;
-  });
