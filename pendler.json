@@ -3983,7 +3983,6 @@
     "Deutsche": "*",
     "Ausländer_Sonst": "*",
     "AZB": 0
-
   },
   {
     "A/E": "E",
@@ -4164,8 +4163,7 @@
     "Deutsche": "*",
     "Ausländer_Sonst": "*",
     "AZB": 0
-  }
-  ,
+  },
   {
     "A/E": "E",
     "Wohnort": "Berlin, Stadt",

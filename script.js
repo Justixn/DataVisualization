@@ -26,7 +26,7 @@ svg
   .append("rect")
   .attr("width", "100%")
   .attr("height", "100%")
-  .attr("fill", "lightgrey");
+  .attr("fill", "#E7E7E7");
 
 //style="background-color:green"
 
@@ -37,7 +37,7 @@ d3.json("berlin.geojson").then(function (json) {
     .enter()
     .append("path")
     .attr("d", path)
-    .style("fill", "#AAB8C8")
+    .style("fill", "#BDBDBD")
     .style("stroke", "white")
     .style("stroke-width", 7);
 });
@@ -50,17 +50,17 @@ d3.json("landkreise.geojson").then(function (json) {
     .enter()
     .append("path")
     .attr("d", path)
-    .style("fill", "#AAB8C8")
-    .style("stroke", "#386DA9")
+    .style("fill", "#BDBDBD") //  #AAB8C8
+    .style("stroke", "#386DA9");
 
-    .on("mouseover", function () {
-      d3.select(this).style("fill", "orange");
-      d3.select(this).append("text");
-    })
+  // .on("mouseover", function () {
+  //   d3.select(this).style("fill", "orange");
+  //   d3.select(this).append("text");
+  // })
 
-    .on("mouseout", function () {
-      d3.select(this).style("fill", "#AAB8C8");
-    });
+  // .on("mouseout", function () {
+  //   d3.select(this).style("fill", "#AAB8C8");
+  // });
 });
 
 function reset() {
@@ -80,10 +80,10 @@ function fromBerlin() {
         return d.population / 5000;
       })
       .style("fill", "rgb(230, 136, 136)")
-      .style("stroke", "red")
+      .style("stroke", "darkred")
       .style("stroke-width", 1)
       .style("visibility", "visible")
-      .style("opacity", 0.2)
+      .style("opacity", 0.17)
 
       .attr("transform", function (d) {
         return (
@@ -99,11 +99,11 @@ function fromBerlin() {
       .enter()
       .append("circle", ".pin")
       .attr("r", 5)
-      .style("fill", "black")
-      .style("stroke", "white")
+      .style("fill", "darkred")
+      .style("stroke", "black")
       .style("stroke-width", 2)
       .style("visibility", "visible")
-      .style("opacity", 0.2)
+      .style("opacity", 0.17)
 
       .attr("transform", function (d) {
         return (
@@ -180,7 +180,7 @@ function fromBerlin() {
       .style("stroke", "black")
       .style("stroke-width", 2)
       .style("visibility", "visible")
-      .style("opacity", 0.2);
+      .style("opacity", 0.17);
   });
 }
 
@@ -200,7 +200,7 @@ function toBerlin() {
       .style("stroke", "blue")
       .style("stroke-width", 1)
       .style("visibility", "visible")
-      .style("opacity", 0.2)
+      .style("opacity", 0.17)
 
       .attr("transform", function (d) {
         return (
@@ -241,7 +241,7 @@ function toBerlin() {
       .style("stroke", "white")
       .style("stroke-width", 2)
       .style("visibility", "visible")
-      .style("opacity", 0.2)
+      .style("opacity", 0.17)
 
       .attr("transform", function (d) {
         return (
@@ -297,7 +297,7 @@ function toBerlin() {
       .style("stroke", "white")
       .style("stroke-width", 2)
       .style("visibility", "visible")
-      .style("opacity", 0.2);
+      .style("opacity", 0.17);
   });
 }
 
@@ -328,6 +328,7 @@ var Linie = function () {
   //commuting();
   var x = document.getElementById("LandName").value;
   var insgesamt = 0;
+
   fetch("pendler.json")
     .then((res) => res.json())
     .then((data) => {
@@ -335,43 +336,65 @@ var Linie = function () {
       var json = Object.values(data).filter((v) =>
         v.Arbeitsort.startsWith("Berlin")
       );
-      var json2 = Object.values(data).filter((v) => v.Wohnort.startsWith("Berlin"));
+      var json2 = Object.values(data).filter((v) =>
+        v.Wohnort.startsWith("Berlin")
+      );
       var inBrandenburg = 0;
-      
 
       for (var i = 0; i < json1.length; i++) {
         if (document.getElementById("LandName").value == json1[i].Wohnort) {
           inBrandenburg += json1[i].Insgesamt;
-         
-          
         }
-
-
       }
-      
-      for(var i = 0; i < json2.length; i++){
-        if(document.getElementById("LandName").value == json2[i].Arbeitsort && toggle.checked == false){
 
+      for (var i = 0; i < json2.length; i++) {
+        if (
+          document.getElementById("LandName").value == json2[i].Arbeitsort &&
+          toggle.checked == false
+        ) {
           document.getElementById("Anzahl").innerHTML = json2[i].Insgesamt;
           document.getElementById("Anzahl1").innerHTML = json2[i].Frauen;
           document.getElementById("Anzahl2").innerHTML = json2[i].Männer;
           document.getElementById("Anzahl3").innerHTML = json2[i].AZB;
-          document.getElementById("Percent1").innerHTML = Math.round((json2[i].Frauen / json2[i].Insgesamt) * 100);
-          document.getElementById("Percent2").innerHTML = Math.round((json2[i].Männer / json2[i].Insgesamt) * 100);
-          document.getElementById("Percent3").innerHTML = Math.round((json2[i].AZB / json2[i].Insgesamt) * 100);
-          document.getElementById("stop1").setAttribute("offset",Math.round((json2[i].Frauen / json2[i].Insgesamt) * 100) );
-          document.getElementById("stop2").setAttribute("offset",Math.round((json2[i].Frauen / json2[i].Insgesamt) * 100) );
-          document.getElementById("stop3").setAttribute("offset",Math.round((json2[i].Frauen / json2[i].Insgesamt) * 100) );
+          document.getElementById("Percent1").innerHTML = Math.round(
+            (json2[i].Frauen / json2[i].Insgesamt) * 100
+          );
+          document.getElementById("Percent2").innerHTML = Math.round(
+            (json2[i].Männer / json2[i].Insgesamt) * 100
+          );
+          document.getElementById("Percent3").innerHTML = Math.round(
+            (json2[i].AZB / json2[i].Insgesamt) * 100
+          );
+          document
+            .getElementById("stop1")
+            .setAttribute(
+              "offset",
+              Math.round((json2[i].Frauen / json2[i].Insgesamt) * 100)
+            );
+          document
+            .getElementById("stop2")
+            .setAttribute(
+              "offset",
+              Math.round((json2[i].Frauen / json2[i].Insgesamt) * 100)
+            );
+          document
+            .getElementById("stop3")
+            .setAttribute(
+              "offset",
+              Math.round((json2[i].Frauen / json2[i].Insgesamt) * 100)
+            );
           document.getElementById("FrontColor1").innerHTML =
-            Math.round((13.9)) + "%";
+            Math.round(13.9) + "%";
           document.getElementById("FrontColor2").innerHTML =
-            Math.round((86.1)) + "%";
-      
+            Math.round(86.1) + "%";
         }
       }
 
       for (var i = 0; i < json.length; i++) {
-        if (document.getElementById("LandName").value == json[i].Wohnort && toggle.checked == true) {
+        if (
+          document.getElementById("LandName").value == json[i].Wohnort &&
+          toggle.checked == true
+        ) {
           insgesamt = inBrandenburg + json[i].Insgesamt;
           document.getElementById("Anzahl").innerHTML = json[i].Insgesamt;
           document.getElementById("Anzahl1").innerHTML = json[i].Frauen;
@@ -409,19 +432,17 @@ var Linie = function () {
           document.getElementById("FrontColor2").innerHTML =
             Math.round((inBrandenburg / insgesamt) * 100) + "%";
         }
-        
       }
-      
     });
   svg
     .selectAll("line")
-    .style("opacity", 0.2)
-    .filter((ort) => ort.name == x)
+    .style("opacity", 0.17)
+    .filter((ort) => ort.name == x || x == "Alle")
     .style("opacity", 0.9999);
   svg
     .selectAll("circle")
-    .style("opacity", 0.2)
-    .filter((ort) => ort.name == x || ort.name == "Berlin")
+    .style("opacity", 0.17)
+    .filter((ort) => ort.name == x || ort.name == "Berlin" || x == "Alle")
     .style("opacity", 0.9999);
   // svg
   //   .select("circle")
@@ -441,43 +462,65 @@ function colorchange() {
       var json = Object.values(data).filter((v) =>
         v.Arbeitsort.startsWith("Berlin")
       );
-      var json2 = Object.values(data).filter((v) => v.Wohnort.startsWith("Berlin"));
+      var json2 = Object.values(data).filter((v) =>
+        v.Wohnort.startsWith("Berlin")
+      );
       var inBrandenburg = 0;
-      
 
       for (var i = 0; i < json1.length; i++) {
         if (document.getElementById("LandName").value == json1[i].Wohnort) {
           inBrandenburg += json1[i].Insgesamt;
-         
-          
         }
-
-
       }
-      
-      for(var i = 0; i < json2.length; i++){
-        if(document.getElementById("LandName").value == json2[i].Arbeitsort && toggle.checked == false){
 
+      for (var i = 0; i < json2.length; i++) {
+        if (
+          document.getElementById("LandName").value == json2[i].Arbeitsort &&
+          toggle.checked == false
+        ) {
           document.getElementById("Anzahl").innerHTML = json2[i].Insgesamt;
           document.getElementById("Anzahl1").innerHTML = json2[i].Frauen;
           document.getElementById("Anzahl2").innerHTML = json2[i].Männer;
           document.getElementById("Anzahl3").innerHTML = json2[i].AZB;
-          document.getElementById("Percent1").innerHTML = Math.round((json2[i].Frauen / json2[i].Insgesamt) * 100);
-          document.getElementById("Percent2").innerHTML = Math.round((json2[i].Männer / json2[i].Insgesamt) * 100);
-          document.getElementById("Percent3").innerHTML = Math.round((json2[i].AZB / json2[i].Insgesamt) * 100);
-          document.getElementById("stop1").setAttribute("offset",Math.round((json2[i].Frauen / json2[i].Insgesamt) * 100) );
-          document.getElementById("stop2").setAttribute("offset",Math.round((json2[i].Frauen / json2[i].Insgesamt) * 100) );
-          document.getElementById("stop3").setAttribute("offset",Math.round((json2[i].Frauen / json2[i].Insgesamt) * 100) );
+          document.getElementById("Percent1").innerHTML = Math.round(
+            (json2[i].Frauen / json2[i].Insgesamt) * 100
+          );
+          document.getElementById("Percent2").innerHTML = Math.round(
+            (json2[i].Männer / json2[i].Insgesamt) * 100
+          );
+          document.getElementById("Percent3").innerHTML = Math.round(
+            (json2[i].AZB / json2[i].Insgesamt) * 100
+          );
+          document
+            .getElementById("stop1")
+            .setAttribute(
+              "offset",
+              Math.round((json2[i].Frauen / json2[i].Insgesamt) * 100)
+            );
+          document
+            .getElementById("stop2")
+            .setAttribute(
+              "offset",
+              Math.round((json2[i].Frauen / json2[i].Insgesamt) * 100)
+            );
+          document
+            .getElementById("stop3")
+            .setAttribute(
+              "offset",
+              Math.round((json2[i].Frauen / json2[i].Insgesamt) * 100)
+            );
           document.getElementById("FrontColor1").innerHTML =
-            Math.round((13.9)) + "%";
+            Math.round(13.9) + "%";
           document.getElementById("FrontColor2").innerHTML =
-            Math.round((86.1)) + "%";
-      
+            Math.round(86.1) + "%";
         }
       }
 
       for (var i = 0; i < json.length; i++) {
-        if (document.getElementById("LandName").value == json[i].Wohnort && toggle.checked == true) {
+        if (
+          document.getElementById("LandName").value == json[i].Wohnort &&
+          toggle.checked == true
+        ) {
           insgesamt = inBrandenburg + json[i].Insgesamt;
           document.getElementById("Anzahl").innerHTML = json[i].Insgesamt;
           document.getElementById("Anzahl1").innerHTML = json[i].Frauen;
@@ -515,9 +558,7 @@ function colorchange() {
           document.getElementById("FrontColor2").innerHTML =
             Math.round((inBrandenburg / insgesamt) * 100) + "%";
         }
-        
       }
-      
     });
   if (toggle.checked == false) {
     fromBerlin();
