@@ -209,7 +209,9 @@ var Linie = function () {
         document.getElementById("stop1").setAttribute('offset', (Math.round((json[i].Frauen)/(json[i].Insgesamt)*100))+"%");
         document.getElementById("stop2").setAttribute('offset', (Math.round((json[i].Frauen)/(json[i].Insgesamt)*100))+"%");
         document.getElementById("stop3").setAttribute('offset', (Math.round((json[i].Männer)/(json[i].Insgesamt)*100))+"%");
-        console.log((Math.round((json[i].AZB)/(json[i].Insgesamt)*100))+"%");
+        document.getElementById("FrontColor1").innerHTML = (Math.round((json[i].Frauen)/(json[i].Insgesamt)*100))+"%";
+        document.getElementById("FrontColor2").innerHTML = (Math.round((json[i].Männer)/(json[i].Insgesamt)*100))+"%";
+        
         
       }
     }
