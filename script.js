@@ -205,11 +205,20 @@ var Linie = function () {
         v.Arbeitsort.startsWith("Berlin")
       );
       var inBrandenburg = 0;
+      var auspendlerM = 0;
+      var auspendlerF = 0;
+      var auspendlerAZ = 0;
 
       for (var i = 0; i < json1.length; i++) {
         if (document.getElementById("LandName").value == json1[i].Wohnort) {
           inBrandenburg += json1[i].Insgesamt;
+          auspendlerM += json1[i].Männer;
+          auspendlerF += json1[i].Frauen;
+          auspendlerAZ += json1[i].AZB;
+          console.log(auspendlerM);
         }
+
+
       }
 
       for (var i = 0; i < json.length; i++) {

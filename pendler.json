@@ -32,8 +32,8 @@
     "Insgesamt": 23,
     "Männer": 10,
     "Frauen": 13,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
     "AZB": 0
   },
   {
@@ -56,9 +56,9 @@
     "Insgesamt": 24,
     "Männer": 19,
     "Frauen": 5,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
-    "AZB": "*"
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -68,9 +68,9 @@
     "Insgesamt": 76,
     "Männer": 31,
     "Frauen": 45,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
-    "AZB": "*"
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -94,7 +94,7 @@
     "Frauen": 18,
     "Deutsche": 48,
     "Ausländer_Sonst": 6,
-    "AZB": "*"
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -116,8 +116,8 @@
     "Insgesamt": 42,
     "Männer": 27,
     "Frauen": 15,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
     "AZB": 5
   },
   {
@@ -152,9 +152,9 @@
     "Insgesamt": 17,
     "Männer": 14,
     "Frauen": 3,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
-    "AZB": "*"
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -250,7 +250,7 @@
     "Frauen": 16,
     "Deutsche": 25,
     "Ausländer_Sonst": 16,
-    "AZB": "*"
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -282,10 +282,10 @@
     "Nummer": "12063",
     "Arbeitsort": "Havelland",
     "Insgesamt": 13,
-    "Männer": "*",
-    "Frauen": "*",
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
+    "Männer": 0,
+    "Frauen": 0,
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
     "AZB": 0
   },
   {
@@ -344,8 +344,8 @@
     "Insgesamt": 43,
     "Männer": 18,
     "Frauen": 25,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
     "AZB": 4
   },
   {
@@ -358,7 +358,7 @@
     "Frauen": 27,
     "Deutsche": 86,
     "Ausländer_Sonst": 7,
-    "AZB": "*"
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -392,9 +392,9 @@
     "Insgesamt": 14,
     "Männer": 11,
     "Frauen": 3,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
-    "AZB": "*"
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -426,10 +426,10 @@
     "Nummer": "12051",
     "Arbeitsort": "Brandenburg an der Havel",
     "Insgesamt": 30,
-    "Männer": "*",
-    "Frauen": "*",
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
+    "Männer": 0,
+    "Frauen": 0,
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
     "AZB": 0
   },
   {
@@ -466,7 +466,7 @@
     "Frauen": 19,
     "Deutsche": 50,
     "Ausländer_Sonst": 7,
-    "AZB": "*"
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -538,7 +538,7 @@
     "Frauen": 3,
     "Deutsche": 13,
     "Ausländer_Sonst": 3,
-    "AZB": "*"
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -560,9 +560,9 @@
     "Insgesamt": 23,
     "Männer": 7,
     "Frauen": 16,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
-    "AZB": "*"
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -610,7 +610,7 @@
     "Frauen": 12,
     "Deutsche": 17,
     "Ausländer_Sonst": 3,
-    "AZB": "*"
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -668,8 +668,8 @@
     "Insgesamt": 78,
     "Männer": 42,
     "Frauen": 36,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
     "AZB": 4
   },
   {
@@ -682,7 +682,7 @@
     "Frauen": 45,
     "Deutsche": 85,
     "Ausländer_Sonst": 30,
-    "AZB": "*"
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -742,7 +742,7 @@
     "Frauen": 30,
     "Deutsche": 101,
     "Ausländer_Sonst": 7,
-    "AZB": "*"
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -764,9 +764,9 @@
     "Insgesamt": 31,
     "Männer": 22,
     "Frauen": 9,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
-    "AZB": "*"
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -812,9 +812,9 @@
     "Insgesamt": 14,
     "Männer": 8,
     "Frauen": 6,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
-    "AZB": "*"
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -824,8 +824,8 @@
     "Insgesamt": 15,
     "Männer": 9,
     "Frauen": 6,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
     "AZB": 0
   },
   {
@@ -848,8 +848,8 @@
     "Insgesamt": 24,
     "Männer": 12,
     "Frauen": 12,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
     "AZB": 0
   },
   {
@@ -896,9 +896,9 @@
     "Insgesamt": 59,
     "Männer": 46,
     "Frauen": 13,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
-    "AZB": "*"
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -908,8 +908,8 @@
     "Insgesamt": 213,
     "Männer": 107,
     "Frauen": 106,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
     "AZB": 3
   },
   {
@@ -944,8 +944,8 @@
     "Insgesamt": 35,
     "Männer": 23,
     "Frauen": 12,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
     "AZB": 0
   },
   {
@@ -994,7 +994,7 @@
     "Frauen": 3,
     "Deutsche": 21,
     "Ausländer_Sonst": 0,
-    "AZB": "*"
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -1042,7 +1042,7 @@
     "Frauen": 3,
     "Deutsche": 18,
     "Ausländer_Sonst": 0,
-    "AZB": "*"
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -1054,7 +1054,7 @@
     "Frauen": 9,
     "Deutsche": 15,
     "Ausländer_Sonst": 0,
-    "AZB": "*"
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -1066,7 +1066,7 @@
     "Frauen": 76,
     "Deutsche": 285,
     "Ausländer_Sonst": 25,
-    "AZB": "*"
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -1162,7 +1162,7 @@
     "Frauen": 54,
     "Deutsche": 148,
     "Ausländer_Sonst": 9,
-    "AZB": "*"
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -1184,8 +1184,8 @@
     "Insgesamt": 73,
     "Männer": 54,
     "Frauen": 19,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
     "AZB": 0
   },
   {
@@ -1210,7 +1210,7 @@
     "Frauen": 44,
     "Deutsche": 160,
     "Ausländer_Sonst": 12,
-    "AZB": "*"
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -1270,7 +1270,7 @@
     "Frauen": 3,
     "Deutsche": 20,
     "Ausländer_Sonst": 0,
-    "AZB": "*"
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -1304,9 +1304,9 @@
     "Insgesamt": 16,
     "Männer": 12,
     "Frauen": 4,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
-    "AZB": "*"
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -1342,7 +1342,7 @@
     "Frauen": 32,
     "Deutsche": 53,
     "Ausländer_Sonst": 0,
-    "AZB": "*"
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -1388,9 +1388,9 @@
     "Insgesamt": 34,
     "Männer": 25,
     "Frauen": 9,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
-    "AZB": "*"
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -1410,8 +1410,8 @@
     "Nummer": "12063",
     "Arbeitsort": "Havelland",
     "Insgesamt": 10,
-    "Männer": "*",
-    "Frauen": "*",
+    "Männer": 0,
+    "Frauen": 0,
     "Deutsche": 6,
     "Ausländer_Sonst": 4,
     "AZB": 0
@@ -1424,9 +1424,9 @@
     "Insgesamt": 24,
     "Männer": 18,
     "Frauen": 6,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
-    "AZB": "*"
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -1434,11 +1434,11 @@
     "Nummer": "12065",
     "Arbeitsort": "Oberhavel",
     "Insgesamt": 13,
-    "Männer": "*",
-    "Frauen": "*",
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
-    "AZB": "*"
+    "Männer": 0,
+    "Frauen": 0,
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -1460,9 +1460,9 @@
     "Insgesamt": 34,
     "Männer": 22,
     "Frauen": 12,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
-    "AZB": "*"
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -1472,8 +1472,8 @@
     "Insgesamt": 105,
     "Männer": 40,
     "Frauen": 65,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
     "AZB": 4
   },
   {
@@ -1484,8 +1484,8 @@
     "Insgesamt": 220,
     "Männer": 164,
     "Frauen": 56,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
     "AZB": 9
   },
   {
@@ -1518,11 +1518,11 @@
     "Nummer": "120",
     "Arbeitsort": "Übrige Kreise (Regierungsbezirk)",
     "Insgesamt": 6,
-    "Männer": "*",
-    "Frauen": "*",
+    "Männer": 0,
+    "Frauen": 0,
     "Deutsche": 6,
     "Ausländer_Sonst": 0,
-    "AZB": "*"
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -1570,7 +1570,7 @@
     "Frauen": 13,
     "Deutsche": 33,
     "Ausländer_Sonst": 3,
-    "AZB": "*"
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -1628,9 +1628,9 @@
     "Insgesamt": 125,
     "Männer": 91,
     "Frauen": 34,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
-    "AZB": "*"
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -1654,7 +1654,7 @@
     "Frauen": 23,
     "Deutsche": 29,
     "Ausländer_Sonst": 0,
-    "AZB": "*"
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -1666,7 +1666,7 @@
     "Frauen": 34,
     "Deutsche": 88,
     "Ausländer_Sonst": 9,
-    "AZB": "*"
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -1700,9 +1700,9 @@
     "Insgesamt": 78,
     "Männer": 53,
     "Frauen": 25,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
-    "AZB": "*"
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -1712,9 +1712,9 @@
     "Insgesamt": 11,
     "Männer": 8,
     "Frauen": 3,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
-    "AZB": "*"
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -1734,8 +1734,8 @@
     "Nummer": "12073",
     "Arbeitsort": "Uckermark",
     "Insgesamt": 16,
-    "Männer": "*",
-    "Frauen": "*",
+    "Männer": 0,
+    "Frauen": 0,
     "Deutsche": 13,
     "Ausländer_Sonst": 3,
     "AZB": 0
@@ -1746,8 +1746,8 @@
     "Nummer": "120",
     "Arbeitsort": "Übrige Kreise (Regierungsbezirk)",
     "Insgesamt": 6,
-    "Männer": "*",
-    "Frauen": "*",
+    "Männer": 0,
+    "Frauen": 0,
     "Deutsche": 6,
     "Ausländer_Sonst": 0,
     "AZB": 0
@@ -1784,8 +1784,8 @@
     "Insgesamt": 77,
     "Männer": 59,
     "Frauen": 18,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
     "AZB": 8
   },
   {
@@ -1856,9 +1856,9 @@
     "Insgesamt": 45,
     "Männer": 29,
     "Frauen": 16,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
-    "AZB": "*"
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -1894,7 +1894,7 @@
     "Frauen": 15,
     "Deutsche": 42,
     "Ausländer_Sonst": 3,
-    "AZB": "*"
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -1918,7 +1918,7 @@
     "Frauen": 42,
     "Deutsche": 77,
     "Ausländer_Sonst": 4,
-    "AZB": "*"
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -1942,7 +1942,7 @@
     "Frauen": 4,
     "Deutsche": 16,
     "Ausländer_Sonst": 0,
-    "AZB": "*"
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -1952,9 +1952,9 @@
     "Insgesamt": 47,
     "Männer": 35,
     "Frauen": 12,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
-    "AZB": "*"
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -2024,8 +2024,8 @@
     "Insgesamt": 38,
     "Männer": 23,
     "Frauen": 15,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
     "AZB": 3
   },
   {
@@ -2038,7 +2038,7 @@
     "Frauen": 53,
     "Deutsche": 86,
     "Ausländer_Sonst": 3,
-    "AZB": "*"
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -2086,7 +2086,7 @@
     "Frauen": 9,
     "Deutsche": 21,
     "Ausländer_Sonst": 0,
-    "AZB": "*"
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -2168,8 +2168,8 @@
     "Insgesamt": 53,
     "Männer": 37,
     "Frauen": 16,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
     "AZB": 3
   },
   {
@@ -2180,9 +2180,9 @@
     "Insgesamt": 11,
     "Männer": 8,
     "Frauen": 3,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
-    "AZB": "*"
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -2204,8 +2204,8 @@
     "Insgesamt": 410,
     "Männer": 198,
     "Frauen": 212,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
     "AZB": 8
   },
   {
@@ -2264,9 +2264,9 @@
     "Insgesamt": 148,
     "Männer": 59,
     "Frauen": 89,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
-    "AZB": "*"
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -2288,8 +2288,8 @@
     "Insgesamt": 21,
     "Männer": 14,
     "Frauen": 7,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
     "AZB": 0
   },
   {
@@ -2324,8 +2324,8 @@
     "Insgesamt": 14,
     "Männer": 10,
     "Frauen": 4,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
     "AZB": 0
   },
   {
@@ -2348,9 +2348,9 @@
     "Insgesamt": 20,
     "Männer": 17,
     "Frauen": 3,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
-    "AZB": "*"
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -2360,9 +2360,9 @@
     "Insgesamt": 71,
     "Männer": 62,
     "Frauen": 9,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
-    "AZB": "*"
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -2374,7 +2374,7 @@
     "Frauen": 3,
     "Deutsche": 11,
     "Ausländer_Sonst": 0,
-    "AZB": "*"
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -2384,8 +2384,8 @@
     "Insgesamt": 84,
     "Männer": 44,
     "Frauen": 40,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
     "AZB": 3
   },
   {
@@ -2410,7 +2410,7 @@
     "Frauen": 42,
     "Deutsche": 217,
     "Ausländer_Sonst": 45,
-    "AZB": "*"
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -2420,8 +2420,8 @@
     "Insgesamt": 14,
     "Männer": 10,
     "Frauen": 4,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
     "AZB": 0
   },
   {
@@ -2456,8 +2456,8 @@
     "Insgesamt": 54,
     "Männer": 35,
     "Frauen": 19,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
     "AZB": 11
   },
   {
@@ -2528,8 +2528,8 @@
     "Insgesamt": 88,
     "Männer": 49,
     "Frauen": 39,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
     "AZB": 0
   },
   {
@@ -2542,7 +2542,7 @@
     "Frauen": 13,
     "Deutsche": 52,
     "Ausländer_Sonst": 3,
-    "AZB": "*"
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -2566,7 +2566,7 @@
     "Frauen": 58,
     "Deutsche": 217,
     "Ausländer_Sonst": 4,
-    "AZB": "*"
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -2588,8 +2588,8 @@
     "Insgesamt": 52,
     "Männer": 19,
     "Frauen": 33,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
     "AZB": 5
   },
   {
@@ -2638,7 +2638,7 @@
     "Frauen": 7,
     "Deutsche": 45,
     "Ausländer_Sonst": 3,
-    "AZB": "*"
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -2696,9 +2696,9 @@
     "Insgesamt": 13,
     "Männer": 7,
     "Frauen": 6,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
-    "AZB": "*"
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -2746,7 +2746,7 @@
     "Frauen": 17,
     "Deutsche": 59,
     "Ausländer_Sonst": 5,
-    "AZB": "*"
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -2830,7 +2830,7 @@
     "Frauen": 54,
     "Deutsche": 108,
     "Ausländer_Sonst": 10,
-    "AZB": "*"
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -2840,9 +2840,9 @@
     "Insgesamt": 39,
     "Männer": 22,
     "Frauen": 17,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
-    "AZB": "*"
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -2852,8 +2852,8 @@
     "Insgesamt": 16,
     "Männer": 8,
     "Frauen": 8,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
     "AZB": 0
   },
   {
@@ -2914,7 +2914,7 @@
     "Frauen": 38,
     "Deutsche": 75,
     "Ausländer_Sonst": 4,
-    "AZB": "*"
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -2938,7 +2938,7 @@
     "Frauen": 67,
     "Deutsche": 126,
     "Ausländer_Sonst": 8,
-    "AZB": "*"
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -2962,7 +2962,7 @@
     "Frauen": 11,
     "Deutsche": 38,
     "Ausländer_Sonst": 0,
-    "AZB": "*"
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -2986,7 +2986,7 @@
     "Frauen": 52,
     "Deutsche": 156,
     "Ausländer_Sonst": 16,
-    "AZB": "*"
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -3008,9 +3008,9 @@
     "Insgesamt": 36,
     "Männer": 21,
     "Frauen": 15,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
-    "AZB": "*"
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -3046,7 +3046,7 @@
     "Frauen": 7,
     "Deutsche": 23,
     "Ausländer_Sonst": 0,
-    "AZB": "*"
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -3116,8 +3116,8 @@
     "Insgesamt": 85,
     "Männer": 27,
     "Frauen": 58,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
     "AZB": 4
   },
   {
@@ -3130,7 +3130,7 @@
     "Frauen": 4,
     "Deutsche": 14,
     "Ausländer_Sonst": 0,
-    "AZB": "*"
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -3154,7 +3154,7 @@
     "Frauen": 5,
     "Deutsche": 17,
     "Ausländer_Sonst": 0,
-    "AZB": "*"
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -3166,7 +3166,7 @@
     "Frauen": 5,
     "Deutsche": 22,
     "Ausländer_Sonst": 0,
-    "AZB": "*"
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -3176,8 +3176,8 @@
     "Insgesamt": 100,
     "Männer": 68,
     "Frauen": 32,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
     "AZB": 3
   },
   {
@@ -3188,8 +3188,8 @@
     "Insgesamt": 44,
     "Männer": 12,
     "Frauen": 32,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
     "AZB": 0
   },
   {
@@ -3238,7 +3238,7 @@
     "Frauen": 19,
     "Deutsche": 56,
     "Ausländer_Sonst": 3,
-    "AZB": "*"
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -3248,9 +3248,9 @@
     "Insgesamt": 24,
     "Männer": 21,
     "Frauen": 3,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
-    "AZB": "*"
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -3258,8 +3258,8 @@
     "Nummer": "12073",
     "Arbeitsort": "Uckermark",
     "Insgesamt": 16,
-    "Männer": "*",
-    "Frauen": "*",
+    "Männer": 0,
+    "Frauen": 0,
     "Deutsche": 13,
     "Ausländer_Sonst": 3,
     "AZB": 0
@@ -3272,9 +3272,9 @@
     "Insgesamt": 22,
     "Männer": 15,
     "Frauen": 7,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
-    "AZB": "*"
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -3308,9 +3308,9 @@
     "Insgesamt": 38,
     "Männer": 27,
     "Frauen": 11,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
-    "AZB": "*"
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -3356,9 +3356,9 @@
     "Insgesamt": 29,
     "Männer": 17,
     "Frauen": 12,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
-    "AZB": "*"
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -3402,11 +3402,11 @@
     "Nummer": "12065",
     "Arbeitsort": "Oberhavel",
     "Insgesamt": 28,
-    "Männer": "*",
-    "Frauen": "*",
+    "Männer": 0,
+    "Frauen": 0,
     "Deutsche": 21,
     "Ausländer_Sonst": 7,
-    "AZB": "*"
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -3440,8 +3440,8 @@
     "Insgesamt": 26,
     "Männer": 13,
     "Frauen": 13,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
     "AZB": 4
   },
   {
@@ -3452,9 +3452,9 @@
     "Insgesamt": 92,
     "Männer": 70,
     "Frauen": 22,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
-    "AZB": "*"
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -3466,7 +3466,7 @@
     "Frauen": 39,
     "Deutsche": 109,
     "Ausländer_Sonst": 16,
-    "AZB": "*"
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -3476,8 +3476,8 @@
     "Insgesamt": 10,
     "Männer": 10,
     "Frauen": 0,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
     "AZB": 0
   },
   {
@@ -3488,8 +3488,8 @@
     "Insgesamt": 10,
     "Männer": 7,
     "Frauen": 3,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
     "AZB": 0
   },
   {
@@ -3574,7 +3574,7 @@
     "Frauen": 38,
     "Deutsche": 90,
     "Ausländer_Sonst": 7,
-    "AZB": "*"
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -3596,8 +3596,8 @@
     "Insgesamt": 581,
     "Männer": 339,
     "Frauen": 242,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
     "AZB": 10
   },
   {
@@ -3646,7 +3646,7 @@
     "Frauen": 196,
     "Deutsche": 288,
     "Ausländer_Sonst": 5,
-    "AZB": "*"
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -3658,7 +3658,7 @@
     "Frauen": 62,
     "Deutsche": 184,
     "Ausländer_Sonst": 20,
-    "AZB": "*"
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -3668,9 +3668,9 @@
     "Insgesamt": 28,
     "Männer": 17,
     "Frauen": 11,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
-    "AZB": "*"
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -3752,8 +3752,8 @@
     "Insgesamt": 34,
     "Männer": 20,
     "Frauen": 14,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
     "AZB": 6
   },
   {
@@ -3764,9 +3764,9 @@
     "Insgesamt": 12,
     "Männer": 7,
     "Frauen": 5,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
-    "AZB": "*"
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -3824,9 +3824,9 @@
     "Insgesamt": 18,
     "Männer": 9,
     "Frauen": 9,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
-    "AZB": "*"
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -3836,9 +3836,9 @@
     "Insgesamt": 27,
     "Männer": 21,
     "Frauen": 6,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
-    "AZB": "*"
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -3910,7 +3910,7 @@
     "Frauen": 27,
     "Deutsche": 74,
     "Ausländer_Sonst": 5,
-    "AZB": "*"
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -3932,9 +3932,9 @@
     "Insgesamt": 17,
     "Männer": 12,
     "Frauen": 5,
-    "Deutsche": "*",
-    "Ausländer_Sonst": "*",
-    "AZB": "*"
+    "Deutsche": 0,
+    "Ausländer_Sonst": 0,
+    "AZB": 0
   },
   {
     "A/E": "A",
@@ -3959,5 +3959,114 @@
     "Deutsche": 3789,
     "Ausländer_Sonst": 114,
     "AZB": 153
+  },
+  {
+    "A/E": "E",
+    "Wohnort": "Berlin, Stadt",
+    "Nummer": "120",
+    "Arbeitsort": "Spree-Neiße",
+    "Insgesamt": 214,
+    "Männer": 135,
+    "Frauen": 79,
+    "Deutsche": "*",
+    "Ausländer_Sonst": "*",
+    "AZB": 0
+  },
+  {
+    "A/E": "E",
+    "Wohnort": "Berlin, Stadt",
+    "Nummer": "120",
+    "Arbeitsort": "Oberspreewald-Lausitz",
+    "Insgesamt": 336,
+    "Männer": 204,
+    "Frauen": 132,
+    "Deutsche": "*",
+    "Ausländer_Sonst": "*",
+    "AZB": 0
+
+  },
+  {
+    "A/E": "E",
+    "Wohnort": "Berlin, Stadt",
+    "Nummer": "120",
+    "Arbeitsort": "Elbe-Elster",
+    "Insgesamt": 191,
+    "Männer": 57,
+    "Frauen": 134,
+    "Deutsche": "*",
+    "Ausländer_Sonst": "*",
+    "AZB": 0
+  },
+  {
+    "A/E": "E",
+    "Wohnort": "Berlin, Stadt",
+    "Nummer": "120",
+    "Arbeitsort": "Brandenburg an der Havel",
+    "Insgesamt": 607,
+    "Männer": 341,
+    "Frauen": 266,
+    "Deutsche": "*",
+    "Ausländer_Sonst": "*",
+    "AZB": 0
+  },
+  {
+    "A/E": "E",
+    "Wohnort": "Berlin, Stadt",
+    "Nummer": "120",
+    "Arbeitsort": "Prignitz",
+    "Insgesamt": 213,
+    "Männer": 144,
+    "Frauen": 69,
+    "Deutsche": "*",
+    "Ausländer_Sonst": "*",
+    "AZB": 0
+  },
+  {
+    "A/E": "E",
+    "Wohnort": "Berlin, Stadt",
+    "Nummer": "120",
+    "Arbeitsort": "Uckermark",
+    "Insgesamt": 677,
+    "Männer": 454,
+    "Frauen": 223,
+    "Deutsche": "*",
+    "Ausländer_Sonst": "*",
+    "AZB": 0
+  },
+  {
+    "A/E": "E",
+    "Wohnort": "Berlin, Stadt",
+    "Nummer": "120",
+    "Arbeitsort": "Potsdam",
+    "Insgesamt": 15.014,
+    "Männer": 8.082,
+    "Frauen": 6.932,
+    "Deutsche": "*",
+    "Ausländer_Sonst": "*",
+    "AZB": 0
+  },
+  {
+    "A/E": "E",
+    "Wohnort": "Berlin, Stadt",
+    "Nummer": "120",
+    "Arbeitsort": "Dahme-Spreewald",
+    "Insgesamt": 14.842,
+    "Männer": 9.791,
+    "Frauen": 5.051,
+    "Deutsche": "*",
+    "Ausländer_Sonst": "*",
+    "AZB": 0
+  },
+  {
+    "A/E": "E",
+    "Wohnort": "Berlin, Stadt",
+    "Nummer": "120",
+    "Arbeitsort": "Dahme-Spreewald",
+    "Insgesamt": 14.842,
+    "Männer": 9.791,
+    "Frauen": 5.051,
+    "Deutsche": "*",
+    "Ausländer_Sonst": "*",
+    "AZB": 0
   }
 ]
