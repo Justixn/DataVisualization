@@ -302,6 +302,9 @@ function toBerlin() {
 }
 
 function y(xA, xB, yA, yB, radius) {
+  if (xA == xB)
+    return 0;
+
   d = Math.sqrt((xB - xA) * (xB - xA) + (yB - yA) * (yB - yA));
   dt = d - radius;
   ratio = dt / d;
@@ -313,6 +316,9 @@ function y(xA, xB, yA, yB, radius) {
   return (1 - ratio) * yA + ratio * yB;
 }
 function x(xA, xB, yA, yB, radius) {
+  if (xA == xB)
+    return 0;
+
   d = Math.sqrt((xB - xA) * (xB - xA) + (yB - yA) * (yB - yA));
   dt = d - radius;
   ratio = dt / d;
