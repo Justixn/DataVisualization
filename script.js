@@ -539,4 +539,39 @@ function colorchange() {
     .filter((ort) => ort.name == y || ort.name == "Berlin" || y == "Alle")
     .style("opacity", 0.9999);
 
+
+    document.getElementById("LandName").value = "-";
+
+
+
+    document.getElementById("Anzahl").innerHTML = 0;
+    document.getElementById("Anzahl1").innerHTML = 0;
+    document.getElementById("Anzahl2").innerHTML = 0;
+    document.getElementById("Anzahl3").innerHTML = 0;
+    document.getElementById("Percent1").innerHTML = 0;
+    document.getElementById("Percent2").innerHTML =0;
+    document.getElementById("Percent3").innerHTML = 0;
+    document
+      .getElementById("stop1")
+      .setAttribute(
+        "offset",
+       50 + "%"
+      );
+    document
+      .getElementById("stop2")
+      .setAttribute(
+        "offset",
+       50 + "%"
+      );
+    document
+      .getElementById("stop3")
+      .setAttribute(
+        "offset",
+        100 + "%"
+      );
+    document.getElementById("FrontColor1").innerHTML =
+      50 + "%";
+    document.getElementById("FrontColor2").innerHTML =
+      50 + "%";
+
 }
