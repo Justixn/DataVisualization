@@ -569,17 +569,17 @@ function colorchange() {
   if (toggle.checked == false) {
     fromBerlin();
     document.getElementById("rectangle").style.background =
-      "rgb(230, 136, 136)";
+      "#AA2B2B";
     document.getElementById("rectangle1").style.background =
-      "rgb(243, 218, 218)";
+      "#F3E2D8";
 
-    document.getElementById("LandName").style.background = "rgb(243,218,218)";
+    document.getElementById("LandName").style.background = "#F3E2D8";
     document.getElementById("LandName").style.color = "black";
-    document.getElementById("stop1").style.stopColor = "rgb(250, 136, 136)";
-    document.getElementById("stop2").style.stopColor = "rgb(243, 120, 120)";
-    document.getElementById("stop3").style.stopColor = "rgb(243, 120, 120)";
-    document.getElementById("circle1").style.fill = "rgb(250, 136, 136)";
-    document.getElementById("circle2").style.fill = "rgb(243, 120, 120)";
+    document.getElementById("stop1").style.stopColor = "#EF7E7E";
+    document.getElementById("stop2").style.stopColor = "#F5A0A0";
+    document.getElementById("stop3").style.stopColor = "#F5A0A0";
+    document.getElementById("circle1").style.fill = "#EF7E7E";
+    document.getElementById("circle2").style.fill = "#F5A0A0";
 
     var frontColor = document.getElementsByClassName("FrontColor");
 
@@ -604,11 +604,11 @@ function colorchange() {
     document.getElementById("rectangle1").style.background = "#00060B";
     document.getElementById("LandName").style.background = "#00060B";
     document.getElementById("LandName").style.color = "white";
-    document.getElementById("stop1").style.stopColor = "rgb(120,120,255)";
-    document.getElementById("stop2").style.stopColor = "rgb(50,50,255)";
-    document.getElementById("stop3").style.stopColor = "rgb(50,50,255)";
-    document.getElementById("circle1").style.fill = "rgb(120, 120, 255)";
-    document.getElementById("circle2").style.fill = "rgb(50,50,255)";
+    document.getElementById("stop1").style.stopColor = "#00A3FF";
+    document.getElementById("stop2").style.stopColor = "#5079A0";
+    document.getElementById("stop3").style.stopColor = "#5079A0";
+    document.getElementById("circle1").style.fill = "#00A3FF";
+    document.getElementById("circle2").style.fill = "#5079A0";
 
     var myText = document.getElementsByClassName("Text");
     var frontColor = document.getElementsByClassName("FrontColor");
