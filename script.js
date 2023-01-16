@@ -461,6 +461,108 @@ function dataChange(){
             Math.round((inBrandenburg / insgesamt) * 100) + "%";
         }
       }
+
+      if (document.getElementById("LandName").value == "Alle"){
+
+        var alleGesamt = 0;
+        var alleFrauen = 0;
+        var alleMaenner = 0;
+        var alleAuszubildende = 0;
+
+        if ( toggle.checked == true) {
+
+            for(var i = 0; i < json.length; i++)
+            {
+              alleGesamt+= json[i].Insgesamt;
+              alleFrauen+= json[i].Frauen;
+              alleMaenner+= json[i].Männer;
+              alleAuszubildende+= json[i].AZB;
+            }
+
+            document.getElementById("Anzahl").innerHTML = alleGesamt;
+            document.getElementById("Anzahl1").innerHTML = alleFrauen;
+            document.getElementById("Anzahl2").innerHTML = alleMaenner;
+            document.getElementById("Anzahl3").innerHTML = alleAuszubildende;
+            document.getElementById("Percent1").innerHTML = Math.round(
+              (alleFrauen / alleGesamt) * 100
+            );
+            document.getElementById("Percent2").innerHTML = Math.round(
+              (alleMaenner / alleGesamt) * 100
+            );
+            document.getElementById("Percent3").innerHTML = Math.round(
+              (alleAuszubildende / alleGesamt) * 100
+            );
+            document
+              .getElementById("stop1")
+              .setAttribute(
+                "offset",
+                Math.round((alleGesamt / insgesamt) * 100) + "%"
+              );
+            document
+              .getElementById("stop2")
+              .setAttribute(
+                "offset",
+                Math.round((alleGesamt / insgesamt) * 100) + "%"
+              );
+            document
+              .getElementById("stop3")
+              .setAttribute(
+                "offset",
+                Math.round((inBrandenburg / insgesamt) * 100) + "%"
+              );
+            document.getElementById("FrontColor1").innerHTML =
+              Math.round((alleGesamt / insgesamt) * 100) + "%";
+            document.getElementById("FrontColor2").innerHTML =
+              Math.round((inBrandenburg / insgesamt) * 100) + "%";
+        }
+
+        if ( toggle.checked == false) {
+
+          for(var i = 0; i < json2.length; i++)
+          {
+            alleGesamt+= json2[i].Insgesamt;
+            alleFrauen+= json2[i].Frauen;
+            alleMaenner+= json2[i].Männer;
+            alleAuszubildende+= json2[i].AZB;
+          }
+
+          document.getElementById("Anzahl").innerHTML = Math.round(alleGesamt);
+          document.getElementById("Anzahl1").innerHTML = alleFrauen;
+          document.getElementById("Anzahl2").innerHTML = alleMaenner;
+          document.getElementById("Anzahl3").innerHTML = alleAuszubildende;
+          document.getElementById("Percent1").innerHTML = Math.round(
+            (alleFrauen / alleGesamt) * 100
+          );
+          document.getElementById("Percent2").innerHTML = Math.round(
+            (alleMaenner / alleGesamt) * 100
+          );
+          document.getElementById("Percent3").innerHTML = Math.round(
+            (alleAuszubildende / alleGesamt) * 100
+          );
+          document
+            .getElementById("stop1")
+            .setAttribute(
+              "offset",
+              Math.round((alleGesamt / insgesamt) * 100) + "%"
+            );
+          document
+            .getElementById("stop2")
+            .setAttribute(
+              "offset",
+              Math.round((alleGesamt / insgesamt) * 100) + "%"
+            );
+          document
+            .getElementById("stop3")
+            .setAttribute(
+              "offset",
+              Math.round((inBrandenburg / insgesamt) * 100) + "%"
+            );
+          document.getElementById("FrontColor1").innerHTML =
+            Math.round((alleGesamt / insgesamt) * 100) + "%";
+          document.getElementById("FrontColor2").innerHTML =
+            Math.round((inBrandenburg / insgesamt) * 100) + "%";
+      }
+      }
     });
 }
 // Farbänderungen
