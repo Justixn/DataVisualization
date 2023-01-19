@@ -1,4 +1,6 @@
-//Daniel Hoff
+//Authors : Sebastian Titsch, Daniel Hoff, Justin-Timothy Linke
+//Date    : 19.01.2023
+
 
 //Width and height
 var w = 1280;
@@ -50,17 +52,10 @@ d3.json("landkreise.geojson").then(function (json) {
     .enter()
     .append("path")
     .attr("d", path)
-    .style("fill", "#BDBDBD") //  #AAB8C8
+    .style("fill", "#BDBDBD") 
     .style("stroke", "#386DA9");
 
-  // .on("mouseover", function () {
-  //   d3.select(this).style("fill", "orange");
-  //   d3.select(this).append("text");
-  // })
-
-  // .on("mouseout", function () {
-  //   d3.select(this).style("fill", "#AAB8C8");
-  // });
+ 
 });
 
 function reset() {
@@ -68,9 +63,12 @@ function reset() {
   svg.selectAll("line").remove();
 }
 
+// load Svg Elements for "Auspendler"
 function fromBerlin() {
   reset();
   d3.json("staedte.geojson").then(function (json) {
+
+    //populationsize circle
     svg
       .selectAll(".pin")
       .data(json.features)
@@ -92,7 +90,7 @@ function fromBerlin() {
           ")"
         );
       });
-
+      
     svg
       .selectAll(".pin")
       .data(json.features)
@@ -134,7 +132,7 @@ function fromBerlin() {
         );
       });
 
-    //Fügt eine Linie an jedem Pin an. Ziel Koordinate ist Berlin
+    //x2 coordinate for creating a line on every pin. Target is Berlin
     svg
       .selectAll("line")
       .data(json.features)
@@ -184,7 +182,7 @@ function fromBerlin() {
   });
 }
 
-// Wählt Städte aus und fügt Pin an Geoposition hinzu
+// chose city and create pin on geoposition
 function toBerlin() {
   reset();
   d3.json("staedte.geojson").then(function (json) {
@@ -251,7 +249,7 @@ function toBerlin() {
         );
       });
 
-    //Fügt eine Linie an jedem Pin an. Ziel Koordinate ist Berlin
+    //x1 coordinate for creating line on every pin. Target is Berlin
     svg
       .selectAll("line")
       .data(json.features)
@@ -300,7 +298,7 @@ function toBerlin() {
       .style("opacity", 0.17);
   });
 }
-
+//calculation for line endposition
 function y(xA, xB, yA, yB, radius) {
   if (xA == xB)
     return 0;
@@ -329,9 +327,9 @@ function x(xA, xB, yA, yB, radius) {
   return (1 - ratio) * xA + ratio * xB;
 }
 
-// Code für die Sichtbarkeit der Linien bei Knopfdruck
+// visibility for lines
 var Linie = function () {
-  //commuting();
+  
   var x = document.getElementById("LandName").value;
   dataChange();
  
@@ -347,13 +345,10 @@ var Linie = function () {
     .filter((ort) => ort.name == x || ort.name == "Berlin" || x == "Alle")
     .style("opacity", 0.9999);
 
-  // svg
-  //   .select("circle")
-  //   .style("opacity", 0.2)
-  //   .filter((ort) => ort.name == "Berlin")
-  //   .style("opacity", 0.9999);
+ 
 };
 
+// reads data from json files 
 function dataChange(){
  
   var insgesamt = 0;
@@ -568,7 +563,9 @@ function dataChange(){
       }
     });
 }
-// Farbänderungen
+
+
+
 function colorchange() {
   var y = document.getElementById("LandName").value;
  
@@ -632,6 +629,8 @@ function colorchange() {
       myFront[counter].style.color = "white";
     }
   }
+
+  //defaul value on load
   svg
     .selectAll("line")
     .style("opacity", 0.17)
