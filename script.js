@@ -378,7 +378,6 @@ function dataChange(){
       
       for (var i = 0; i < json2.length; i++) {
         ausBerlin += json2[i].Insgesamt;
-        console.log(ausBerlin);
         if (
           document.getElementById("LandName").value == json2[i].Arbeitsort &&
           toggle.checked == false
