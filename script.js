@@ -357,6 +357,7 @@ var Linie = function () {
 function dataChange(){
  
   var insgesamt = 0;
+  
   fetch("pendler.json")
     .then((res) => res.json())
     .then((data) => {
@@ -368,18 +369,21 @@ function dataChange(){
         v.Wohnort.startsWith("Berlin")
       );
       var inBrandenburg = 0;
-
+      var ausBerlin = 0;
       for (var i = 0; i < json1.length; i++) {
         if (document.getElementById("LandName").value == json1[i].Wohnort) {
           inBrandenburg += json1[i].Insgesamt;
         }
       }
-
+      
       for (var i = 0; i < json2.length; i++) {
+        ausBerlin += json2[i].Insgesamt;
+        console.log(ausBerlin);
         if (
           document.getElementById("LandName").value == json2[i].Arbeitsort &&
           toggle.checked == false
         ) {
+          
           document.getElementById("Anzahl").innerHTML = json2[i].Insgesamt;
           document.getElementById("Anzahl1").innerHTML = json2[i].Frauen;
           document.getElementById("Anzahl2").innerHTML = json2[i].Männer;
@@ -397,24 +401,24 @@ function dataChange(){
             .getElementById("stop1")
             .setAttribute(
               "offset",
-              Math.round((json2[i].Frauen / json2[i].Insgesamt) * 100)
+              Math.round((json2[i].Insgesamt/ ausBerlin) * 100) + "%"
             );
           document
             .getElementById("stop2")
             .setAttribute(
               "offset",
-              Math.round((json2[i].Frauen / json2[i].Insgesamt) * 100)
+              Math.round((json2[i].Insgesamt / ausBerlin) * 100) + "%"
             );
           document
             .getElementById("stop3")
             .setAttribute(
               "offset",
-              Math.round((json2[i].Frauen / json2[i].Insgesamt) * 100)
+              Math.round(100 - (json2[i].Insgesamt / ausBerlin) * 100) + "%"
             );
           document.getElementById("FrontColor1").innerHTML =
-            Math.round(13.9) + "%";
+            Math.round((json2[i].Insgesamt / ausBerlin) * 100) + "%";
           document.getElementById("FrontColor2").innerHTML =
-            Math.round(86.1) + "%";
+            Math.round(100 - (json2[i].Insgesamt / ausBerlin) * 100) + "%";
         }
       }
 
@@ -493,27 +497,27 @@ function dataChange(){
               (alleAuszubildende / alleGesamt) * 100
             );
             document
-              .getElementById("stop1")
-              .setAttribute(
-                "offset",
-                Math.round((alleGesamt / insgesamt) * 100) + "%"
-              );
-            document
-              .getElementById("stop2")
-              .setAttribute(
-                "offset",
-                Math.round((alleGesamt / insgesamt) * 100) + "%"
-              );
-            document
-              .getElementById("stop3")
-              .setAttribute(
-                "offset",
-                Math.round((inBrandenburg / insgesamt) * 100) + "%"
-              );
-            document.getElementById("FrontColor1").innerHTML =
-              Math.round((alleGesamt / insgesamt) * 100) + "%";
-            document.getElementById("FrontColor2").innerHTML =
-              Math.round((inBrandenburg / insgesamt) * 100) + "%";
+            .getElementById("stop1")
+            .setAttribute(
+              "offset",
+              Math.round(50) + "%"
+            );
+          document
+            .getElementById("stop2")
+            .setAttribute(
+              "offset",
+              Math.round(50) + "%"
+            );
+          document
+            .getElementById("stop3")
+            .setAttribute(
+              "offset",
+              Math.round(100) + "%"
+            );
+          document.getElementById("FrontColor1").innerHTML =
+            "0";
+          document.getElementById("FrontColor2").innerHTML =
+            "0";
         }
 
         if ( toggle.checked == false) {
@@ -543,24 +547,24 @@ function dataChange(){
             .getElementById("stop1")
             .setAttribute(
               "offset",
-              Math.round((alleGesamt / insgesamt) * 100) + "%"
+              Math.round(50) + "%"
             );
           document
             .getElementById("stop2")
             .setAttribute(
               "offset",
-              Math.round((alleGesamt / insgesamt) * 100) + "%"
+              Math.round(50) + "%"
             );
           document
             .getElementById("stop3")
             .setAttribute(
               "offset",
-              Math.round((inBrandenburg / insgesamt) * 100) + "%"
+              Math.round(100) + "%"
             );
           document.getElementById("FrontColor1").innerHTML =
-            Math.round((alleGesamt / insgesamt) * 100) + "%";
+            "0";
           document.getElementById("FrontColor2").innerHTML =
-            Math.round((inBrandenburg / insgesamt) * 100) + "%";
+            "0";
       }
       }
     });
