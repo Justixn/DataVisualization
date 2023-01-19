@@ -494,24 +494,24 @@ function dataChange(){
             .getElementById("stop1")
             .setAttribute(
               "offset",
-              Math.round(50) + "%"
+              Math.round((ausBerlin / 2512000) * 100) + "%"
             );
           document
             .getElementById("stop2")
             .setAttribute(
               "offset",
-              Math.round(50) + "%"
+              Math.round((ausBerlin / 2512000) * 100) + "%"
             );
           document
             .getElementById("stop3")
             .setAttribute(
               "offset",
-              Math.round(100) + "%"
+              Math.round(100 -(ausBerlin / 2512000) * 100) + "%"
             );
           document.getElementById("FrontColor1").innerHTML =
-            "0";
+          Math.round((ausBerlin / 2512000) * 100) + "%";
           document.getElementById("FrontColor2").innerHTML =
-            "0";
+          Math.round(100 - (ausBerlin / 2512000) * 100) + "%";
         }
 
         if ( toggle.checked == false) {
@@ -541,24 +541,24 @@ function dataChange(){
             .getElementById("stop1")
             .setAttribute(
               "offset",
-              Math.round(50) + "%"
+              Math.round((ausBerlin / 3650000) * 100) + "%"
             );
           document
             .getElementById("stop2")
             .setAttribute(
               "offset",
-              Math.round(50) + "%"
+              Math.round((ausBerlin / 3650000) * 100) + "%"
             );
           document
             .getElementById("stop3")
             .setAttribute(
               "offset",
-              Math.round(100) + "%"
+              Math.round(100 -(ausBerlin / 3650000) * 100) + "%"
             );
           document.getElementById("FrontColor1").innerHTML =
-            "0";
+          Math.round((ausBerlin / 3650000) * 100) + "%";
           document.getElementById("FrontColor2").innerHTML =
-            "0";
+          Math.round(100 - (ausBerlin / 3650000) * 100) + "%";
       }
       }
     });
